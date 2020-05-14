@@ -2,25 +2,26 @@
 <html>
 	<head>
 		<title>Drake Lin</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-		<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway|Arvo|Manuale" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-			<li><a href="/portfolio">Portfolio</a></li>
-        		<li><a href="/arts">The Arts</a></li>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 		
-    		</ul>
-		</nav>
-		<div class="container">
+		<link rel="stylesheet" href="/css/nav.css" type="text/css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+        $(function() {
+            $("#Nav").load("navbar.html");
+        });
+    	</script>
+	</head>
+
+	<body>
+		<div class="row col-sm-offset-2">
+			<div id="Nav"></div>
+		</div>
+		<section class="container">
     		<div class="blurb">
-        		<h1>Hi there, I'm Drake!</h1>
+        		<h1>Hi, I'm Drake!</h1>
 				<p>UC Berkeley EECS undergraduate <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
+    		</div>
+		</section>
 	</body>
 </html>
