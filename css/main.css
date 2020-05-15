@@ -3,7 +3,7 @@ body {
     width: 70%;
 }
 nav ul, footer ul {
-    font-family:'Helvetica';
+    font-family:'Lora';
     padding: 0px;
     list-style: none;
     font-weight: bold;
@@ -20,11 +20,17 @@ a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-size: 3em;
-    font-family:'Helvetica';
+    font-size: 4em;
+    font-family: 'Lora';
 }
 p {
+    font-family: 'Lora';
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
+}
+#profile {
+    border-radius: 50%;
+    max-width: 30%;
+    float: left;
 }
