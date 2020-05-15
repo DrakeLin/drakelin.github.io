@@ -6,14 +6,12 @@ nav {
 }
 
 nav ul, footer ul {
-    float: right;
+    float: left;
+    display: block;
     font-family:'Lora';
-    padding-top: 20px;
-    padding-right: 20px;
-    list-style: none;
+    padding-top: 14px;
     font-weight: bold;
 }
-
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
