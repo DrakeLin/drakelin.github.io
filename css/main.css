@@ -12,7 +12,7 @@ h2 {
 }
 p {
     font-size: 1em;
-    line-height: 1em;
+    line-height: .5em;
     color: #333;
 }
 .main {
