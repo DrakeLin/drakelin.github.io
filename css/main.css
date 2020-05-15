@@ -12,13 +12,6 @@ nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
-a {
-    text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
-}
 h1 {
     font-size: 4em;
     font-family: 'Lora';
@@ -29,8 +22,23 @@ p {
     line-height: 1.4em;
     color: #333;
 }
+.home {
+    display: flex;
+    align-items:center;
+    font-family: 'Lora';
+}
 #profile {
     border-radius: 50%;
-    max-width: 30%;
+    max-width: 20%;
     float: left;
+}
+.hi {
+    padding-left: 20px;
+}
+#more {
+    color: #999;
+    border-width: 2px;
+    border-color: black;
+    padding: 10px;
+    border-style: solid;
 }
