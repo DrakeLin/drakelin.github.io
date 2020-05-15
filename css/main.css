@@ -13,14 +13,14 @@ p {
     color: #333;
 }
 .main {
-    display: flex;
-    align-items:center;
     width: 80%;
     margin: 100px auto;
 }
 #front {
     margin-top: 250px;
     width: 70%;
+    display: flex;
+    align-items:center;
 }
 #profile {
     border-radius: 50%;
