@@ -1,0 +1,15 @@
+.contact li {
+    padding-top: 10px;
+    list-style: none;
+} 
+.contact a, .contact a:hover, .contact a:active, .contact a:active {
+    color: black;
+    text-decoration: none;
+}
+.contact a:hover {
+    background-color: lightcyan;
+}
+
+.contact li::before {
+    content: "> ";
+  }
