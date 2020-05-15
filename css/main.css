@@ -7,6 +7,9 @@ h1 {
     font-size: 3em;
     line-height: .5em;
 }
+h2 {
+    line-height: .5em;
+}
 p {
     font-size: 1.5em;
     line-height: 1em;
@@ -34,10 +37,9 @@ p {
 #more {
     color: black;
     background-color: lightcyan;
-    border-width: 2px;
+    border-width: 1px;
     border-color: black;
     padding: 5px;
     border-style: solid;
-    font-size: 1.5em;
     text-decoration: none;
 }
