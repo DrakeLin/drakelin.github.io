@@ -19,10 +19,11 @@
     text-decoration: none;
 }
 .navbar a:hover {
-    background: #ddd;
+    background: #CCD7E4;
     color: black;
 }
 #home {
+    color: #12263A;
     float: left;
     padding: 4px 20px;
     font-weight: bold;
