@@ -7,7 +7,7 @@ nav {
 }
 
 nav ul, footer ul {
-    float: right;
+    float: left;
     display: block;
     font-family:'Lora';
     padding-top: 14px;
