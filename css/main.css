@@ -1,6 +1,7 @@
 body {
     margin: 60px auto;
     width: 70%;
+    font-family: 'Lora';
 }
 nav ul, footer ul {
     font-family:'Lora';
@@ -14,18 +15,16 @@ nav ul li, footer ul li {
 }
 h1 {
     font-size: 4em;
-    font-family: 'Lora';
 }
 p {
-    font-family: 'Lora';
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
 }
 .home {
+    margin-top: 100px;
     display: flex;
     align-items:center;
-    font-family: 'Lora';
 }
 #profile {
     border-radius: 50%;
@@ -41,4 +40,5 @@ p {
     border-color: black;
     padding: 10px;
     border-style: solid;
+    font-size: 1.5em;
 }
