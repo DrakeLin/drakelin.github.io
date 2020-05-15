@@ -3,15 +3,8 @@ body {
     width: 70%;
     font-family: 'Lora';
 }
-nav ul, footer ul {
-    font-family:'Lora';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
+.right {
+    float: right;
 }
 h1 {
     font-size: 4em;
