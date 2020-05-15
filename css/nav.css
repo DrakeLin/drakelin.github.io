@@ -3,10 +3,11 @@ nav {
     position: fixed; 
     top: 0;
     width: 100%; 
+    background-color: white;
 }
 
 nav ul, footer ul {
-    float: left;
+    float: right;
     display: block;
     font-family:'Lora';
     padding-top: 14px;
