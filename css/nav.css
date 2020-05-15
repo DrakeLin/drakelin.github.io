@@ -5,9 +5,10 @@
     top: 0;
     width: 100%; 
     font-family: Lora;
+    left:0;
 }
 #right {
-    padding-right: 20px;
+    padding-right: 0px;
 }
 .navbar a {
     float: right;
@@ -20,5 +21,11 @@
 .navbar a:hover {
     background: #ddd;
     color: black;
+}
+#home {
+    float: left;
+    padding: 4px 20px;
+    font-weight: bold;
+    font-size: 2em;
 }
   
