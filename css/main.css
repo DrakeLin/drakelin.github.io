@@ -22,23 +22,24 @@ p {
     color: #333;
 }
 .home {
-    margin-top: 100px;
     display: flex;
     align-items:center;
+    width: 80%;
+    margin: 100px auto;
 }
 #profile {
     border-radius: 50%;
-    max-width: 20%;
-    float: left;
+    max-width: 250px;
+    float:left;
 }
 .hi {
-    padding-left: 20px;
+    padding-left: 30px;
 }
 #more {
     color: #999;
     border-width: 2px;
     border-color: black;
-    padding: 10px;
+    padding: 5px;
     border-style: solid;
     font-size: 1.5em;
 }
