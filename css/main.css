@@ -4,11 +4,12 @@ body {
     font-family: 'Lora';
 }
 h1 {
-    font-size: 4em;
+    font-size: 3em;
+    line-height: .5em;
 }
 p {
     font-size: 1.5em;
-    line-height: 1.4em;
+    line-height: 1em;
     color: #333;
 }
 .main {
@@ -37,4 +38,5 @@ p {
     padding: 5px;
     border-style: solid;
     font-size: 1.5em;
+    text-decoration: none;
 }
