@@ -2,6 +2,14 @@ body {
     margin: 20px auto;
     width: 70%;
 }
+
+nav {
+    overflow: hidden;
+    position: fixed; 
+    top: 0;
+    width: 100%; 
+}
+
 nav ul, footer ul {
     font-family:'Lora';
     padding: 0px;
