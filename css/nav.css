@@ -8,7 +8,8 @@ nav {
 nav ul, footer ul {
     float: right;
     font-family:'Lora';
-    padding: 0px;
+    padding-top: 20px;
+    padding-right: 20px;
     list-style: none;
     font-weight: bold;
 }
