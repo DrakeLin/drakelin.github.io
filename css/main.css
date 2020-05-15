@@ -29,7 +29,8 @@ p {
     padding-left: 30px;
 }
 #more {
-    color: #999;
+    color: black;
+    background-color: lightcyan;
     border-width: 2px;
     border-color: black;
     padding: 5px;
