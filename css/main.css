@@ -17,6 +17,9 @@ p {
     width: 80%;
     margin: 100px auto;
 }
+#front {
+    margin-top: 250px;
+}
 #profile {
     border-radius: 50%;
     max-width: 250px;
