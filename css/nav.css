@@ -1,26 +1,24 @@
-nav {
+.navbar {
     overflow: hidden;
+    background-color: white;
     position: fixed; 
     top: 0;
     width: 100%; 
-    background-color: white;
+    font-family: Lora;
 }
-
-nav ul, footer ul {
-    float: left;
+#right {
+    padding-right: 20px;
+}
+.navbar a {
+    float: right;
     display: block;
-    font-family:'Lora';
-    padding-top: 14px;
-    font-weight: bold;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-a {
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
     text-decoration: none;
-    color: #999;
 }
-a:hover {
-    text-decoration: underline;
+.navbar a:hover {
+    background: #ddd;
+    color: black;
 }
+  
