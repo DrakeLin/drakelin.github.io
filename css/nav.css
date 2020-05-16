@@ -7,6 +7,7 @@
     font-family: Lora;
     left:0;
     font-size: 1em;
+    z-index:1;
 }
 #right {
     padding-right: 0px;
