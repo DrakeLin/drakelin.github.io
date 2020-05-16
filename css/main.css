@@ -33,16 +33,35 @@ li a:hover {
 }
 #resume {
     float: right;
-    width:50%;
+    width: 50%;
     position: relative;
     padding-bottom: 50%;
 }
 #resume h2{
-    padding-top: 0.5em;
+    padding-top: 0.3em;
 }
 #resume iframe {
     border: none;
     position: absolute;
     width: 80%;
     height: 80%;
+}
+.catalogleft img {
+    width: 200px;
+}
+
+.catalogleft {
+    width: 50%;
+}
+
+.catalogright img {
+    width: 200px;
+}
+
+.catalogright {
+    float: right;
+}
+
+#first {
+    margin-top: 0.1em;
 }
