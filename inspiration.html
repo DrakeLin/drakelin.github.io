@@ -4,12 +4,29 @@
 		<title>Drake Lin</title>
 		<link rel="stylesheet" href="./css/main.css" type="text/css">
 		<link rel="stylesheet" href="./css/nav.css" type="text/css"/>
+		<link rel="stylesheet" href="./css/inspiration.css" type="text/css"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script>
-        $(function() {
-            $("#Nav").load("./navbar.html");
-        });
+			$(function() {
+				$("#Nav").load("./navbar.html");
+			});
     	</script>
+		<script>
+			var slideIndex = 0;
+			showSlides();
+
+			function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("slide");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}
+			slides[slideIndex-1].style.display = "block";
+			setTimeout(showSlides, 2000); // Change image every 2 seconds
+			}
+		</script>
 	</head>
 
 	<body>
@@ -22,6 +39,18 @@
 			Note, my imagination is weak (I can't visualize multiple subject, scenes, or movement) so I am biased towards movies and video games. 
 			In my opinion, video games are one of the strongest storytelling genres, forcing us to fully embrace and engage with the narrative. </p> 
 			
+			<div class="slideshow">
+				<div class="slide">
+					<img src="./files/arrival.jpg" alt="arrival">
+				</div>
+				<div class="slide">
+					<img src="./files/prestige.jpg" alt="prestige">
+				</div>
+				<div class="slide">
+					<img src="./files/inception.jpg" alt="inception">
+				</div>
+			</div>
+			
 			<section class="catalogright">
 				<h3 id="first">Movies</h3>
 				<img src="./files/arrival.jpg" alt="arrival">
@@ -31,15 +60,35 @@
 				<img src="./files/inception.jpg" alt="inception">
 				<p><b>Inception:</b> forgiveness and facing your past, how we see reality</p>
 			</section>
-			
+
 			<section class="catalogleft">
-				<h3>Movies</h3>
+				<h3 id="first">Games</h3>
+				<img src="./files/botw.jpg" alt="botw">
+				<p><b>The Legend of Zelda: Breath of the Wild:</b> the atmosphere is soothing and absolutely gorgeous</p>
+				<img src="./files/last.jpg" alt="last of us">
+				<p><b>The Last of Us:</b> how relationships shape us, a beautifully crafted narrative </p>
+				<img src="./files/nier.jpg" alt="nier">
+				<p><b>Nier Automata:</b> tackling our purpose in life long past the end scene </p>
+			</section>
+			
+			<section class="catalogright">
+				<h3 id="first">Movies</h3>
 				<img src="./files/arrival.jpg" alt="arrival">
 				<p><b>Arrival:</b> a quintessential scifi movie that explores the human need for connection and the concept of free will</p>
 				<img src="./files/prestige.jpg" alt="prestige">
 				<p><b>The Prestige:</b> exploring duality, and how obsession and competition can ruin us </p>
 				<img src="./files/inception.jpg" alt="inception">
 				<p><b>Inception:</b> forgiveness and facing your past, how we see reality</p>
+			</section>
+
+			<section class="catalogleft">
+				<h3>Games</h3>
+				<img src="./files/botw.jpg" alt="botw">
+				<p><b>The Legend of Zelda: Breath of the Wild:</b> the atmosphere is soothing and absolutely gorgeous</p>
+				<img src="./files/last.jpg" alt="last of us">
+				<p><b>The Last of Us:</b> how relationships shape us, a beautifully crafted narrative </p>
+				<img src="./files/nier.jpg" alt="nier">
+				<p><b>Nier Automata:</b> tackling our purpose in life long past the end scene </p>
 			</section>
 		</div>
 	</body>

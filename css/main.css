@@ -47,7 +47,7 @@ li a:hover {
     height: 80%;
 }
 .catalogleft img {
-    width: 200px;
+    height: 300px;
 }
 
 .catalogleft {
@@ -55,11 +55,22 @@ li a:hover {
 }
 
 .catalogright img {
-    width: 200px;
+    height: 300px;
 }
 
 .catalogright {
     float: right;
+    width: 50%;
+}
+
+.slide {
+    display: none;
+}
+
+.slideshow {
+    height: 300px;
+    position: relative;
+    margin: auto;
 }
 
 #first {
