@@ -17,7 +17,7 @@
 			Note, my imagination is weak (I can't visualize multiple subject, scenes, or movement) so I am biased towards movies and video games. 
 			In my opinion, video games are one of the strongest storytelling genres, forcing us to fully embrace and engage with the narrative. </p> 
 			
-			
+			<div id="pics">
 			<div class="slideshow">	
 				<div class="slide">
 					<img src="./files/arrival.jpg" alt="arrival">
@@ -46,9 +46,18 @@
 				<div class="slide">
 					<img src="./files/1984.jpg" alt="1984">
 				</div>
+				<div class="slide">
+					<img src="./files/steins.jpg" alt="steins">
+				</div>
+				<div class="slide">
+					<img src="./files/name.jpg" alt="name">
+				</div>
+				<div class="slide">
+					<img src="./files/psycho.jpg" alt="psycho">
+				</div>
 			</div>
-			<br>
 			
+			<section>
 			<h3 id="first">Movies</h3>
 			<ul>
 				<li><b>Arrival:</b> exploring the human need for connection and the concept of free will</li>
@@ -61,7 +70,22 @@
 				<li><b>The Last of Us:</b> how relationships shape us, a beautifully crafted narrative</li>
 				<li><b>Nier Automata:</b> tackling our purpose in life long past the end scene </li>
 			</ul>
+			<h3 id="first">Books</h3>
+			<ul>
+				<li><b>Thirteen Reasons Why:</b> our influence on other people's lives</li>
+				<li><b>Three Body Trilogy:</b> a series that dives into a bountiful of ideas about humanity's future</li>
+				<li><b>1984:</b> drawing parallels to today </li>
+			</ul>
+			<h3 id="first">Anime ("TV shows")</h3> 
+			<ul>
+				<li><b>Steins Gate:</b> the impact of our decisions and our persistence to fix the future</li>
+				<li><b>Your Name:</b> sometimes you just need a beautifully created rom com</li>
+				<li><b>Psycho-Pass:</b> similar to Minority Report, diving into the panopticon and government</li>
+			</ul>
+			</section>
+			</div>
 		</div>
+		
 
 		<script>
 			var slideIndex = 0;
@@ -76,7 +100,7 @@
 			slideIndex++;
 			if (slideIndex > slides.length) {slideIndex = 1}
 			slides[slideIndex-1].style.display = "block";
-			setTimeout(showSlides, 2000); // Change image every 2 seconds
+			setTimeout(showSlides, 1500); 
 			}
 		</script>
 	</body>

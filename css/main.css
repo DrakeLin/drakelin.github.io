@@ -46,22 +46,6 @@ li a:hover {
     width: 80%;
     height: 80%;
 }
-.catalogleft img {
-    height: 300px;
-}
-
-.catalogleft {
-    width: 50%;
-}
-
-.catalogright img {
-    height: 300px;
-}
-
-.catalogright {
-    float: right;
-    width: 50%;
-}
 
 .slideshow {
     position: relative;
@@ -76,4 +60,9 @@ li a:hover {
 
 #first {
     margin-top: 0.1em;
+}
+
+#pics {
+    display: flex;
+    align-items: center;
 }
