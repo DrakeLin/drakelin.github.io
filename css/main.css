@@ -63,14 +63,15 @@ li a:hover {
     width: 50%;
 }
 
-.slide {
-    display: none;
-}
-
 .slideshow {
-    height: 300px;
     position: relative;
     margin: auto;
+    float: right;
+    width: 30%;
+}
+
+.slide > img {
+    width: 100%;
 }
 
 #first {

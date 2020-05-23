@@ -4,12 +4,56 @@
 		<title>Drake Lin</title>
 		<link rel="stylesheet" href="./css/main.css" type="text/css">
 		<link rel="stylesheet" href="./css/nav.css" type="text/css"/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script>
-			$(function() {
-				$("#Nav").load("./navbar.html");
-			});
-    	</script>
+	</head>
+
+	<body>
+		<div id="Nav"></div>
+		<div class="main">
+			<h2>Inspiration</h2>
+			<p>The human condition fascinates me. Why do we act the way we do? What drives us? Each piece of art reflects the author's view on these ideas. 
+			The following are some of the works I found inspirational. Science fiction is a genre I gravitate towards but no so much for its tech stuff.
+			Good science fiction works don't so much as look out as they look in. They take extreme circumstances and see how humanity responds.
+			Note, my imagination is weak (I can't visualize multiple subject, scenes, or movement) so I am biased towards movies and video games. 
+			In my opinion, video games are one of the strongest storytelling genres, forcing us to fully embrace and engage with the narrative. </p> 
+			
+			
+			<div class="slideshow">	
+				
+				<div class="slide">
+					<img src="./files/arrival.jpg" alt="arrival">
+				</div>
+				<div class="slide">
+					<img src="./files/prestige.jpg" alt="prestige">
+				</div>
+				<div class="slide">
+					<img src="./files/inception.jpg" alt="inception">
+				</div>
+				<div class="slide">
+					<img src="./files/botw.jpg" alt="botw">
+				</div>
+				<div class="slide">
+					<img src="./files/last.jpg" alt="last of us">
+				</div>
+				<div class="slide">
+					<img src="./files/nier.jpg" alt="nier">
+				</div>
+			</div>
+			<br>
+			
+			<h3 id="first">Movies</h3>
+			<ul>
+				<li><b>Arrival:</b> exploring the human need for connection and the concept of free will</li>
+				<li><b>The Prestige:</b> exploring duality, and how obsession and competition can ruin us </li>
+				<li><b>Inception:</b> forgiveness and facing your past, how we see reality</li>
+			</ul>
+			<h3 id="first">Games</h3>
+			<ul>
+				<li><b>The Legend of Zelda: Breath of the Wild:</b> the atmosphere is soothing and absolutely gorgeous</li>
+				<li><b>The Last of Us:</b> how relationships shape us, a beautifully crafted narrative</li>
+				<li><b>Nier Automata:</b> tackling our purpose in life long past the end scene </li>
+			</ul<
+		</div>
+
 		<script>
 			var slideIndex = 0;
 			showSlides();
@@ -26,69 +70,5 @@
 			setTimeout(showSlides, 2000); // Change image every 2 seconds
 			}
 		</script>
-	</head>
-
-	<body>
-		<div id="Nav"></div>
-		<div class="main">
-			<h2>Inspiration</h2>
-			<p>The human condition fascinates me. Why do we act the way we do? What drives us? Each piece of art reflects the author's view on these ideas. 
-			The following are some of the works I found inspirational. Science fiction is a genre I gravitate towards but no so much for its tech stuff.
-			Good science fiction works don't so much as look out as they look in. They take extreme circumstances and see how humanity responds.
-			Note, my imagination is weak (I can't visualize multiple subject, scenes, or movement) so I am biased towards movies and video games. 
-			In my opinion, video games are one of the strongest storytelling genres, forcing us to fully embrace and engage with the narrative. </p> 
-			
-			<div class="slideshow">
-				<div class="slide">
-					<img src="./files/arrival.jpg" alt="arrival">
-				</div>
-				<div class="slide">
-					<img src="./files/prestige.jpg" alt="prestige">
-				</div>
-				<div class="slide">
-					<img src="./files/inception.jpg" alt="inception">
-				</div>
-			</div>
-			
-			<section class="catalogright">
-				<h3 id="first">Movies</h3>
-				<img src="./files/arrival.jpg" alt="arrival">
-				<p><b>Arrival:</b> a quintessential scifi movie that explores the human need for connection and the concept of free will</p>
-				<img src="./files/prestige.jpg" alt="prestige">
-				<p><b>The Prestige:</b> exploring duality, and how obsession and competition can ruin us </p>
-				<img src="./files/inception.jpg" alt="inception">
-				<p><b>Inception:</b> forgiveness and facing your past, how we see reality</p>
-			</section>
-
-			<section class="catalogleft">
-				<h3 id="first">Games</h3>
-				<img src="./files/botw.jpg" alt="botw">
-				<p><b>The Legend of Zelda: Breath of the Wild:</b> the atmosphere is soothing and absolutely gorgeous</p>
-				<img src="./files/last.jpg" alt="last of us">
-				<p><b>The Last of Us:</b> how relationships shape us, a beautifully crafted narrative </p>
-				<img src="./files/nier.jpg" alt="nier">
-				<p><b>Nier Automata:</b> tackling our purpose in life long past the end scene </p>
-			</section>
-			
-			<section class="catalogright">
-				<h3 id="first">Movies</h3>
-				<img src="./files/arrival.jpg" alt="arrival">
-				<p><b>Arrival:</b> a quintessential scifi movie that explores the human need for connection and the concept of free will</p>
-				<img src="./files/prestige.jpg" alt="prestige">
-				<p><b>The Prestige:</b> exploring duality, and how obsession and competition can ruin us </p>
-				<img src="./files/inception.jpg" alt="inception">
-				<p><b>Inception:</b> forgiveness and facing your past, how we see reality</p>
-			</section>
-
-			<section class="catalogleft">
-				<h3>Games</h3>
-				<img src="./files/botw.jpg" alt="botw">
-				<p><b>The Legend of Zelda: Breath of the Wild:</b> the atmosphere is soothing and absolutely gorgeous</p>
-				<img src="./files/last.jpg" alt="last of us">
-				<p><b>The Last of Us:</b> how relationships shape us, a beautifully crafted narrative </p>
-				<img src="./files/nier.jpg" alt="nier">
-				<p><b>Nier Automata:</b> tackling our purpose in life long past the end scene </p>
-			</section>
-		</div>
 	</body>
 </html>
