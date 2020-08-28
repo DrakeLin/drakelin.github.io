@@ -8,12 +8,19 @@ h1 {
     line-height: .5em;
 }
 h2 {
+    font-size: 2em;
     line-height: .5em;
     padding-top: 1em;
 }
-p {
+h3 {
+    font-size: 1.5em;
+    line-height: .5em;
+    padding-top: 2em;
+}
+p, span {
+    margin-top: 0;
     font-size: 1em;
-    line-height: 1.5em;
+    line-height: 1.8em;
     color: #333;
 }
 .main {
@@ -46,26 +53,27 @@ li a:hover, p a:hover  {
     width: 80%;
     height: 80%;
 }
-
+header > h3 {
+    display: inline-block;
+}
+header span {
+    margin-left: 10px;
+}
 .slideshow {
     position: relative;
     margin: auto;
     float: right;
     width: 30%;
 }
-
 .slide > img {
     width: 100%;
 }
-
-.portfolio > img {
-    width: 50%;
+.portfolio > img, .portfolio > p {
+    width: 70%;
 }
-
 #first {
     margin-top: 0.1em;
 }
-
 #pics {
     display: flex;
     align-items: center;
