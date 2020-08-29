@@ -1,7 +1,7 @@
 body {
     margin: 0px auto;
     width: 100%;
-    font-family: 'Karla, Lora';
+    font-family: 'Impact, Lora';
 }
 h1 {
     font-size: 3em;
@@ -15,7 +15,7 @@ h2 {
 h3 {
     font-size: 1.5em;
     line-height: .5em;
-    padding-top: 2em;
+    padding-top: 1em;
 }
 p, span {
     margin-top: 0;
@@ -43,9 +43,6 @@ li a:hover, p a:hover  {
     width: 50%;
     position: relative;
     padding-bottom: 50%;
-}
-#resume h2{
-    padding-top: 0.3em;
 }
 #resume iframe {
     border: none;
