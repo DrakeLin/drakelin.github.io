@@ -4,7 +4,7 @@
     position: fixed; 
     top: 0;
     width: 100%; 
-    font-family: 'Tahoma', 'Lora';
+    font-family: 'Helvetica', 'Lora';
     left:0;
     font-size: 1em;
     z-index:9999;
@@ -43,7 +43,7 @@
     font-size: 1.2em;
     color: black;
     display: block;
-    font-family: 'Tahoma', 'Lora';
+    font-family: 'Helvetica', 'Lora';
 }
 .sidenav a:hover {
     color: gray;
