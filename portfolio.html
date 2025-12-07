@@ -19,12 +19,12 @@
 		<div class="sidenav">
 			<a href="#databricks">Databricks</a>
 			<a href="#bair">BAIR Research</a>
+			<a href="#qube">QubeSat</a>
 			<a href="#spacex">SpaceX</a>
 			<a href="#aws">AWS</a>
 			<a href="#mit">MIT Lincoln Lab</a>
 			<a href="#ultima">Ultima Genomics</a>
 			<a href="#berkeleylab">Berkeley Lab</a>
-			<a href="#qube">QubeSat</a>
 			<a href="#mood">Mood for Zoom</a>
 			<a href="#senate">Senate Watch</a>
 			<a href="#crawler">Crawler Robot</a>
@@ -41,10 +41,10 @@
 					<span>August 2023 - Present</span>
 				</header>
 				<p>
-					As a Software Engineer at Databricks, I develop cloud storage and credentials infrastructure powering the SAAS enterprise platform.
-					I built an automated multi-cloud blob storage provisioning system managing 1,000,000+ buckets and 500+ TB of customer data, serving 100k+ users.
-					I designed a scalable cloud credential management system for secure cross-region, cross-cloud data access across 10,000+ enterprise workspaces.
-					I also implemented comprehensive monitoring frameworks and change management processes, achieving 99.9999% service uptime.
+					As a Software Engineer at Databricks, I develop the cloud storage and credentials infrastructure powering enterprise data platforms globally. I built an automated
+					multi-cloud blob storage provisioning system managing 1,000,000+ buckets and 500+ TB of customer data across 100k+ users, and designed a scalable cloud credential
+					management system enabling secure cross-region, cross-cloud data access for 10,000+ enterprise workspaces. Through comprehensive monitoring and rigorous change
+					management, we've achieved 99.9999% service uptime.
 				</p>
 
 				<header>
@@ -52,11 +52,26 @@
 					<span>September 2022 - May 2024</span>
 				</header>
 				<p>
-					As a Graduate Student Researcher in the Berkeley Speech Group, I focused on Differentiable Digital Signal Processing for my Master's research.
-					I developed a novel real-time data efficient machine learning model for articulatory synthesis, engineering a streamlined architecture requiring only 0.4M parameters
-					(vs. 9M baseline) while improving Word Error Rate by 1.63% (to 6.67%) and Mean Opinion Score by 0.16 (to 3.74).
-					I achieved 4.9x inference speedup on CPU compared to State Of The Art models while maintaining speech quality, enabling real-time applications.
+					As a Graduate Student Researcher in the Berkeley Speech Group, my Master's research focused on Differentiable Digital Signal Processing for articulatory
+					synthesis—teaching computers to model how human vocal tracts produce speech. I developed a novel real-time ML model requiring only 0.4M parameters (vs. 9M baseline),
+					improving Word Error Rate by 1.63% (to 6.67%) and Mean Opinion Score by 0.16 (to 3.74) while achieving 4.9x inference speedup on CPU. This performance jump meant
+					real-time speech synthesis could run on everyday devices, making assistive communication technologies more accessible.
+					<a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-202.pdf" target="_blank">Read my Master's thesis.</a>
 				</p>
+
+				<header>
+					<h3 id="qube">QubeSat</h3>
+					<span>Fall 2019 - August 2023</span>
+				</header>
+				<p>
+					As part of the mechanical subteam at Space Technologies at Cal, I worked on a four-year mission to send quantum gyroscopes into space for the first time. I designed
+					the CubeSat structure and deployment mechanism, integrating quantum gyroscope payloads and sensors while using SolidWorks to simulate and stress-test designs for
+					launch and space environments. I also wrote the flight software controlling the satellite in orbit. Our goal was proving quantum gyroscopes could work in space,
+					offering revolutionary precision compared to traditional MEMS gyroscopes—critical for future deep space missions. After years of work, QubeSat successfully launched
+					as part of <a href="https://blogs.nasa.gov/kennedy/2022/02/10/elana-41-mission-update/" target="_blank">NASA's ELaNa 41 mission</a>, turning an undergraduate project
+					into orbiting hardware. <a href="https://stac.berkeley.edu/project/qubesat" target="_blank">Click here to check out the website!</a>
+				</p>
+				<img src="./files/qube.jpg">
 
 				<header>
 					<h3 id="spacex">SpaceX</h3>
@@ -64,9 +79,9 @@
 				</header>
 				<p>
 					As a Software Engineer Intern at SpaceX, I designed and implemented critical test infrastructure for satellite hardware torque and energy margin verification,
-					mitigating flight risks and reducing test time by 10x. I developed a spectral analysis system leveraging Short-Time Fourier Transform (STFT) to detect and
-					characterize reaction wheel bearing faults. I also created a comprehensive test automation suite for flight component qualification, integrating hardware
-					control interfaces and data acquisition systems.
+					ensuring satellites could maneuver properly in space. I developed a spectral analysis system using Short-Time Fourier Transform (STFT) to detect reaction wheel
+					bearing faults before they became flight risks, reducing test time by 10x. I also created a comprehensive test automation suite for flight component qualification,
+					integrating hardware control interfaces with data acquisition systems. When your code tests hardware destined for orbit, there's no room for "close enough."
 				</p>
 
 				<header>
@@ -74,9 +89,10 @@
 					<span>July 2021 - October 2021</span>
 				</header>
 				<p>
-					As an SDE Intern at AWS, I architected and implemented full-stack tooling to automate ML product private offer creation in AWS Marketplace, reducing
-					manual engineering effort from hours to minutes. I built RESTful APIs and implemented database integration for the offer management system.
-					I also established a robust CI/CD pipeline with automated integration testing, significantly improving development tool reliability.
+					As an SDE Intern at AWS, I worked on AWS Marketplace, the platform where companies discover and deploy ML models at scale. I architected and implemented
+					full-stack tooling to automate ML product private offer creation, reducing what previously took hours of manual work to minutes. I built RESTful APIs with
+					database integration and established a robust CI/CD pipeline with automated testing, transforming a fragile manual workflow into a reliable system. The project
+					went into production immediately, which was pretty rewarding for a three-month internship.
 				</p>
 
 				<header>
@@ -84,10 +100,11 @@
 					<span>May 2021 - July 2021</span>
 				</header>
 				<p>
-					As a Research Intern at MIT Lincoln Laboratory, I led the design and construction of a custom 4-antenna array system for tracking Lincoln Experimental
-					Satellites (LES), achieving successful signal capture at 230 MHz from multiple satellites. I developed and optimized a Blind Adaptive Beamforming algorithm
-					to isolate and identify satellite signals amid complex co-channel interference, improving signal-to-noise ratio by 30%. I also implemented end-to-end
-					integration testing using phase shifters and RF components to simulate antenna array geometry, capturing and processing data using GNURadio, Python, and MATLAB.
+					As a Research Intern at MIT Lincoln Laboratory, I worked on tracking satellites when their signals are buried in noise and interference. I led the design and
+					construction of a custom 4-antenna array system for tracking Lincoln Experimental Satellites (LES), capturing faint 230 MHz signals from multiple satellites
+					simultaneously amid co-channel interference. By developing and optimizing a Blind Adaptive Beamforming algorithm, I improved signal-to-noise ratio by 30%.
+					The work spanned from theory to hardware: implementing end-to-end integration testing using phase shifters and RF components to simulate antenna array geometry,
+					then processing real data through GNURadio, Python, and MATLAB.
 				</p>
 
 				<header>
@@ -95,9 +112,11 @@
 					<span>May 2020 - May 2021</span>
 				</header>
 				<p>
-					As an Engineering Intern at Ultima Genomics, I developed instrument control software in Python for automated optical system calibration and alignment.
-					I built a data processing pipeline integrating multiple sensors and hardware interfaces using Python, MATLAB, and ACS. I also implemented a real-time
-					monitoring system for laser performance metrics with automated alert triggers, from component design to part manufacturing to software implementation.
+					As an Engineering Intern at Ultima Genomics, I worked on optical systems for DNA sequencing instruments, where precision laser alignment makes the difference
+					between readable data and noise. I developed instrument control software in Python that automated optical system calibration and alignment, and built a data
+					processing pipeline integrating multiple sensors and hardware interfaces using Python, MATLAB, and ACS. I also implemented a real-time monitoring system for
+					laser performance metrics with automated alerts, catching issues before they impacted sequencing runs. The project spanned component design, part manufacturing,
+					and software implementation.
 				</p>
 
 				<header>
@@ -105,34 +124,22 @@
 					<span>December 2019 - January 2021</span>
 				</header>
 				<p>
-					As a Software Research Assistant at Lawrence Berkeley National Laboratory, I developed an automated testing framework in Python/MATLAB for quantum research,
-					reducing experiment runtime by 90%. I built a hardware control system integrating multiple scientific instruments (lasers, waveform generators, sensors).
-					I also created a data processing pipeline for experimental results, reducing analysis time by 70% through automation.
+					As a Software Research Assistant at Lawrence Berkeley National Laboratory, I worked with researchers exploring nitrogen-vacancy centers in diamond for nuclear
+					magnetic resonance—physics experiments requiring precise control of lasers, waveform generators, and sensitive detectors. I developed an automated testing
+					framework in Python/MATLAB that reduced experiment runtime by 90% by eliminating manual instrument control. The system integrated multiple scientific instruments
+					into a unified interface and automatically processed results, cutting analysis time by 70%. Watching researchers go from spending entire days on one experimental
+					run to completing multiple runs in an afternoon was pretty cool.
 				</p>
-
-				<header>
-					<h3 id="qube">QubeSat</h3>
-					<span>Fall 2019 - 2021</span>
-				</header>
-				<p>
-					As a member of Space Technologies at Cal, I worked on the QubeSat mission for 3 semesters, primarily focused on
-					the mechanical design, circuitry layout, and optics. Our mission was to design the first quantum gyroscope fit for space and deploy and test it
-					on a CubeSat through NASA's CubeSat Launch Initiative. This revolutionary technology gives better precision and accuracy in comparison to
-					traditional MEMS gyroscopes, thus making it a better fit for deep space missions.
-					<a href="https://stac.berkeley.edu/project/qubesat" target="_blank">Click here to check out the website!</a>
-				</p>
-				<img src="./files/qube.jpg">
 				
 				<header>
 					<h3 id="mood">Mood for Zoom</h3>
 					<span>Spring 2020</span>
 				</header>
 				<p>
-					During quarantine, my friends and I noticed that professors had trouble engaging with students. Thus, for LA Hacks, we built Mood for Zoom,
-					a real-time aggregate mood visualization tool to help professors, educators, and meeting leaders "read the room" over
-					Zoom. The project used the Google Cloud Vision API to read emotions, PyAutoGUI to continuously take screenshots to input into the API, and TkInter to show the visualization.
-					We were awarded 2nd Place Overall and an honorable mention for Hack Using Machine Learning.
-					<a href="https://devpost.com/software/zoom-platinum" target="_blank">Click here to check out the Devpost!</a>
+					During quarantine, professors lost the ability to "read the room" over Zoom, so for LA Hacks my friends and I built Mood for Zoom—a real-time aggregate
+					mood visualization tool. We used the Google Cloud Vision API to read emotions from faces, PyAutoGUI to continuously capture screenshots, and TkInter to
+					display the aggregate mood to presenters. The project won 2nd Place Overall and an honorable mention for Best Use of Machine Learning.
+					<a href="https://devpost.com/software/zoom-platinum" target="_blank">Check out the Devpost!</a>
 				</p>
 				<img src="./files/zoom.jpg">
 
@@ -141,10 +148,10 @@
 					<span>Spring 2020</span>
 				</header>
 				<p>
-					The average American knows very little about their representatives and whether their own views are being properly represented. Senate Watch
-					was a tool that scraped the official senate.gov website and displayed voting patterns based on party loyalty. To accomplish this, we used
-					beautiful-soup and requests for scraping, Python for data processing, and jquery/javascript for frontend.
-					<a href="https://devpost.com/software/senatewatch" target="_blank">Click here to check out the Devpost!</a>
+					Most Americans know little about how their representatives actually vote, so we built Senate Watch—a tool that scrapes senate.gov to visualize voting patterns
+					and party loyalty. We used Beautiful Soup and requests for scraping, Python for data processing, and jQuery/JavaScript for the frontend. The project helped make
+					congressional voting records more transparent and accessible.
+					<a href="https://devpost.com/software/senatewatch" target="_blank">Check out the Devpost!</a>
 				</p>
 				<img src="./files/senate.jpg">
 
@@ -153,8 +160,8 @@
 					<span>Summer 2018</span>
 				</header>
 				<p>
-					At COSMOS in UCSD, I worked on designing a "walking" robot from scratch. After settling on an insectoid design, my partner and I designed the circuitry,
-					wrote code on a Raspberry Pi and Adafruit PWM driver, and modeled/3D printed the chassis. In a time-based race, our robot easily beat the other competitors by a margin of 50%.
+					At COSMOS UCSD, I designed a walking robot from scratch with an insectoid design. My partner and I built everything—circuit design, Raspberry Pi code with
+					Adafruit PWM drivers, and 3D printed chassis. In the final time-based race, our robot beat competitors by 50%.
 				</p>
 				<iframe width="592px" height="333px" src="https://www.youtube.com/embed/7H9XwOS4yLI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
