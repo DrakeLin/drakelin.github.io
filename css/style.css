@@ -1,0 +1,747 @@
+/* ================================
+   Modern Single-Page Portfolio
+   ================================ */
+
+/* CSS Variables */
+:root {
+    --color-bg: #0a0a0b;
+    --color-bg-secondary: #111113;
+    --color-bg-tertiary: #1a1a1d;
+    --color-text: #e4e4e7;
+    --color-text-secondary: #a1a1aa;
+    --color-text-muted: #71717a;
+    --color-accent: #3b82f6;
+    --color-accent-hover: #60a5fa;
+    --color-border: #27272a;
+    --color-card: #18181b;
+    --color-card-hover: #1f1f23;
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --transition: all 0.3s ease;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --container-width: 1200px;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--color-text);
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-accent-hover);
+}
+
+/* Container */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ================================
+   Navigation
+   ================================ */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: transparent;
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    background: rgba(10, 10, 11, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+    padding: 16px 40px;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.nav-brand:hover {
+    color: var(--color-accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-accent);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-text);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Nav Toggle */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--color-text);
+    transition: var(--transition);
+}
+
+/* ================================
+   Hero Section
+   ================================ */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 24px 60px;
+    position: relative;
+    background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-secondary) 100%);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: var(--container-width);
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--color-border);
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+}
+
+.hero-image img:hover {
+    border-color: var(--color-accent);
+    transform: scale(1.02);
+}
+
+.hero-text h1 {
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, var(--color-text) 0%, var(--color-text-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-intro {
+    font-size: 1.4rem;
+    margin-bottom: 32px;
+    max-width: 500px;
+}
+
+.hero-intro strong {
+    color: var(--color-text);
+}
+
+.hero-cta {
+    display: flex;
+    gap: 16px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--color-accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--color-accent-hover);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--color-text);
+    border: 2px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll-indicator span {
+    display: block;
+    width: 24px;
+    height: 40px;
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    position: relative;
+}
+
+.scroll-indicator span::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 8px;
+    background: var(--color-text-muted);
+    border-radius: 2px;
+    animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+    0% { opacity: 1; top: 8px; }
+    100% { opacity: 0; top: 20px; }
+}
+
+/* ================================
+   Section Styles
+   ================================ */
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    margin-bottom: 16px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--color-accent);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 48px;
+}
+
+/* ================================
+   About Section
+   ================================ */
+.about {
+    background: var(--color-bg-secondary);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.about-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.about-adventures h3 {
+    margin-bottom: 12px;
+    color: var(--color-text);
+}
+
+.about-adventures > p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+.adventure-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    transition: var(--transition);
+}
+
+.tag:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+/* ================================
+   Portfolio Section
+   ================================ */
+.portfolio {
+    background: var(--color-bg);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.portfolio-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    transition: var(--transition);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.portfolio-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.portfolio-card:hover {
+    background: var(--color-card-hover);
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.portfolio-card.featured {
+    grid-column: span 2;
+}
+
+.card-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.card-header h3 {
+    color: var(--color-text);
+    font-size: 1.3rem;
+}
+
+.card-date {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.card-badge {
+    background: var(--color-accent);
+    color: white;
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.portfolio-card p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+.card-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    margin: 16px 0;
+}
+
+.card-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+.card-video {
+    margin-top: 16px;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+}
+
+.card-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ================================
+   Inspiration Section
+   ================================ */
+.inspiration {
+    background: var(--color-bg-secondary);
+}
+
+.inspiration-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.inspiration-item {
+    aspect-ratio: 2/3;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.5s ease;
+}
+
+.inspiration-item.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.inspiration-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.inspiration-item:hover img {
+    transform: scale(1.1);
+}
+
+.inspiration-lists {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--color-border);
+}
+
+.inspiration-category h3 {
+    color: var(--color-accent);
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.inspiration-category p {
+    font-size: 1rem;
+}
+
+/* ================================
+   Contact Section
+   ================================ */
+.contact {
+    background: var(--color-bg);
+    text-align: center;
+}
+
+.contact .section-title {
+    display: block;
+}
+
+.contact .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.contact-links.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 32px;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    color: var(--color-text);
+    transition: var(--transition);
+}
+
+.contact-item:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-icon {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-sm);
+}
+
+/* ================================
+   Footer
+   ================================ */
+.footer {
+    padding: 32px;
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+    background: var(--color-bg-secondary);
+}
+
+.footer p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+/* ================================
+   Responsive Design
+   ================================ */
+@media (max-width: 1024px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-card.featured {
+        grid-column: span 1;
+    }
+
+    .inspiration-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+
+    .navbar {
+        padding: 16px 24px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: var(--color-bg-secondary);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        transition: right 0.3s ease;
+        border-left: 1px solid var(--color-border);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .nav-toggle {
+        display: flex;
+        z-index: 1001;
+    }
+
+    .hero {
+        padding: 100px 24px 60px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-intro {
+        font-size: 1.2rem;
+    }
+
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .inspiration-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .inspiration-lists {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 60px 0;
+    }
+
+    .inspiration-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+}
