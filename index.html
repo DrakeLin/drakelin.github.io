@@ -99,22 +99,22 @@
         </article>
         <article class="work-card infrastructure-card">
           <div class="work-heading"><div><p class="eyebrow">Databricks · 2023–2025</p><h4>Cloud storage infrastructure</h4></div></div>
-          <p class="work-intro">Scaling storage provisioning and credentials across AWS, Azure, and GCP.</p>
+          <p class="work-intro">I built and scaled the services behind Databricks managed storage. They provision and assign storage buckets, manage access credentials, and track cloud account capacity across AWS, Azure, and GCP.</p>
+          <p class="work-intro">My work kept customer signup and storage provisioning fast as the service grew to 1M customers.</p>
           <div class="metric-grid">
             <div><strong>55×</strong><span>fewer DB transactions</span></div>
             <div><strong>35×</strong><span>less lock time</span></div>
-            <div><strong>&lt;200 ms</strong><span>peak launch latency</span></div>
-            <div><strong>1M</strong><span>customers in load tests</span></div>
+            <div><strong>&lt;200 ms</strong><span>P95 signup latency</span></div>
+            <div><strong>1M</strong><span>customers served</span></div>
           </div>
           <details class="work-details"><summary>The engineering details</summary>            <div class="case-study-columns">
               <div>
 
-                <h5>Prepared a storage control plane for a step-change in traffic.</h5>
+                <h5>Kept signup fast at scale.</h5>
                 <p>
-                  Load-tested the system into six-figure bucket counts and million-customer
-                  scenarios, then removed query, polling, and refresh bottlenecks. P95 latency
-                  fell from roughly 2 seconds to about 400 ms in testing, then stayed below
-                  200 ms at peak launch traffic.
+                  I load-tested 150k+ storage buckets to find database bottlenecks, then improved
+                  indexing, batching, and back-pressure. These changes brought P95 signup latency
+                  from roughly 2 seconds to under 200 ms at peak launch traffic.
                 </p>
               </div>
               <div>
