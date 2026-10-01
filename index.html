@@ -6,7 +6,7 @@
   <meta name="description" content="Hi, I'm Drake — a software engineer in New York. Websites I've built, my contributions to Delta Kernel Rust, and a few things I love." />
   <meta name="theme-color" content="#f8f9f5" />
   <title>Drake Lin</title>
-  <link rel="stylesheet" href="./css/style.css?v=98341479" />
+  <link rel="stylesheet" href="./css/style.css?v=7c8d0b8c" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -103,21 +103,13 @@
         <div class="subsection-heading"><h3 id="work-title">Previous work</h3></div>
         <article id="delta-kernel" class="work-card kernel-card">
           <div class="work-heading"><div><p class="eyebrow">Data skipping · Rust</p><h4>Delta Kernel Rust</h4></div><a href="https://github.com/delta-io/delta-kernel-rs" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">↗</span></a></div>
-          <p class="work-intro">I owned read and write statistics for data skipping—helping query engines skip files they don’t need to read.</p>
+          <p class="work-intro">Delta Kernel Rust is an open-source library that helps query engines read and write Delta Lake tables. It handles the table format’s protocol so each engine doesn’t have to implement that logic itself.</p>
+          <p class="work-intro">I owned read and write statistics for data skipping: helping engines use file metadata to skip data they don’t need to read. I delivered features end-to-end for Databricks products and external engines such as delta-rs.</p>
           <div class="kernel-contributions">
             <div><strong>2.5× lower query latency</strong><span>Shipped parsed statistics and partition values to make reads more efficient.</span></div>
-            <div><strong>Statistics on the write path</strong><span>Built a streaming collector for per-file null counts and min/max across nested and complex types.</span></div>
-            <div><strong>Testing strategy</strong><span>Defined a combinatorial feature-interaction framework and fuzz testing for the project.</span></div>
+            <div><strong>Statistics for writes</strong><span>Built a streaming collector for per-file min/max values and null counts, including nested and complex types.</span></div>
+            <div><strong>Testing strategy</strong><span>Defined the project’s testing strategy around feature combinations and fuzzing to catch edge cases.</span></div>
           </div>
-          <details class="work-details">
-            <summary>More contributions</summary>
-            <p>I delivered features end-to-end for Delta Kernel Rust, supporting Databricks products and external engines such as delta-rs. My work also includes timezone-aware partition parsing, expression APIs, and storage listing behavior.</p>
-            <div class="kernel-links">
-              <a href="https://github.com/delta-io/delta-kernel-rs/pull/2998" target="_blank" rel="noopener noreferrer">Structured checkpoint statistics ↗</a>
-              <a href="https://github.com/delta-io/delta-kernel-rs/pull/3022" target="_blank" rel="noopener noreferrer">Parquet statistics API ↗</a>
-              <a href="https://github.com/delta-io/delta-kernel-rs/pull/3118" target="_blank" rel="noopener noreferrer">Timezone-aware partition parsing ↗</a>
-            </div>
-          </details>
         </article>
         <article class="work-card infrastructure-card">
           <div class="work-heading"><div><p class="eyebrow">Databricks · 2023–2025</p><h4>Cloud storage infrastructure</h4></div></div>
@@ -125,42 +117,24 @@
           <p class="work-intro">My work kept customer signup and storage provisioning fast as the service grew to 1M customers.</p>
           <div class="metric-grid">
             <div><strong>55×</strong><span>fewer DB transactions</span></div>
-            <div><strong>35×</strong><span>less lock time</span></div>
+            <div><strong>35×</strong><span>lower lock latency</span></div>
             <div><strong>&lt;200 ms</strong><span>P95 signup latency</span></div>
             <div><strong>1M</strong><span>customers served</span></div>
           </div>
-          <details class="work-details"><summary>The engineering details</summary>            <div class="case-study-columns">
-              <div>
-
-                <h5>Kept signup fast at scale.</h5>
-                <p>
-                  I load-tested 150k+ storage buckets to find database bottlenecks, then improved
-                  indexing, batching, and back-pressure. These changes brought P95 signup latency
-                  from roughly 2 seconds to under 200 ms at peak launch traffic.
-                </p>
-              </div>
-              <div>
-
-                <h5>Collapsed repeated work into a coordinated deployment path.</h5>
-                <p>
-                  Redesigned bucket deployment coordination to eliminate redundant database
-                  work and lock contention. The change cut transaction volume by about 55×,
-                  reduced lock time by about 35×, and shortened reconciliation from roughly
-                  65 seconds to 29 seconds.
-                </p>
-              </div>
-              <div>
-
-                <h5>Turned slow fleet-wide checks into targeted decisions.</h5>
-                <p>
-                  Added a lightweight fullness signal for storage buckets so assignment could
-                  avoid expensive fleet scans. Refresh time dropped from hours to seconds while
-                  assignment latency stayed under 300 ms at 100k-scale tests.
-                </p>
-              </div>
+          <div class="case-study-columns">
+            <div>
+              <h5>Provisioning at scale</h5>
+              <p>Load-tested 150k+ buckets and resolved database bottlenecks with indexing, batching, and back-pressure to keep signup fast during peak traffic.</p>
             </div>
-
-</details>
+            <div>
+              <h5>Storage coordination</h5>
+              <p>Redesigned state and assignment coordination to eliminate redundant database work and reduce lock contention during bucket provisioning.</p>
+            </div>
+            <div>
+              <h5>Faster capacity checks</h5>
+              <p>Added lightweight bucket capacity signals so assignments could avoid scanning the entire fleet. Refreshes dropped from hours to seconds.</p>
+            </div>
+          </div>
         </article>
 
         <div class="earlier-work" id="earlier-title">
