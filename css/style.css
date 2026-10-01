@@ -70,6 +70,16 @@ h2 { font-size: 32px; }
 .more-builds div > span { display: block; color: var(--muted); font-size: 13px; margin-top: 3px; }
 .more-builds > a:hover { text-decoration: none; border-color: var(--accent); }
 .previous-work,.earlier-work { margin-top: 58px; }
+.more-projects { margin-top: 30px; }
+.more-projects > summary { display: block; width: fit-content; margin-inline: auto; padding: 12px 24px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); color: var(--ink); font-size: 14px; text-align: center; list-style: none; }
+.more-projects > summary::-webkit-details-marker { display: none; }
+.more-projects > summary:hover { border-color: var(--accent); background: var(--tint); text-decoration: none; }
+.more-projects > summary span span { margin-left: 12px; }
+.more-projects .show-less { display: none; }
+.more-projects[open] > summary .show-more { display: none; }
+.more-projects[open] > summary .show-less { display: inline; }
+.more-projects-content { margin-top: 34px; }
+
 .work-card { padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); margin-bottom: 18px; }
 .kernel-card { background: var(--tint); }
 .infrastructure-card { background: var(--surface); }
@@ -105,8 +115,7 @@ details > p { margin-top: 12px; font-size: 14px; }
 .earlier-card > a { font-size: 13px; font-weight: 700; display: inline-block; margin: 0 12px 6px 0; }
 .earlier-card summary { font-size: 12px; font-weight: 600; }
 .archive { margin-top: 28px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.archive > summary { padding: 20px 0; font-size: 14px; color: var(--ink); }
-.archive > summary span { float: right; color: var(--muted); font-size: 12px; font-weight: 400; }
+.archive > .subsection-heading { padding-top: 24px; }
 .archive-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px; padding: 14px 0 30px; }
 .archive-item { min-width: 0; }
 .archive-item h4 { font-size: 18px; }
@@ -172,7 +181,6 @@ details > p { margin-top: 12px; font-size: 14px; }
   .case-study-columns { grid-template-columns: 1fr; }
   .earlier-grid { gap: 30px; }
   .earlier-card img { height: 210px; }
-  .archive > summary span { display: block; float: none; margin-left: 16px; margin-top: 4px; }
   .about { grid-template-columns: 1fr; gap: 22px; padding-block: 44px; }
   .about h2 { max-width: none; }
   .contact { flex-direction: column; gap: 22px; padding-block: 34px; }
