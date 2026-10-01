@@ -1,187 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Drake Lin</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <a href="#hero" class="nav-brand">Drake Lin</a>
-      <div class="nav-links">
-        <a href="#about">About</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hi, I'm Drake — a software engineer in New York. Websites I've built, my contributions to Delta Kernel Rust, and a few things I love." />
+  <meta name="theme-color" content="#f8f9f5" />
+  <title>Drake Lin</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="skip-link" href="#portfolio">Skip to portfolio</a>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="#hero" class="nav-brand">Drake Lin<span class="brand-dot">.</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
         <a href="#portfolio">Portfolio</a>
-        <a href="#inspiration">Inspiration</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#contact">Say hello <span aria-hidden="true">↗</span></a>
       </div>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </nav>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-      <div class="hero-content">
-        <div class="hero-image">
-          <img src="./files/profile.jpg" alt="Drake Lin" />
-        </div>
-        <div class="hero-text">
-          <p class="eyebrow">SOFTWARE ENGINEER · SYSTEMS · ML</p>
-          <h1>Hi, I’m Drake 👋</h1>
-          <p class="hero-intro">
-            I'm <strong>Drake Lin</strong>, a software engineer in New York. Previously,
-            I worked on <a href="#delta-kernel">Delta Kernel Rust</a>, the open-source
-            library that helps different query engines read Delta Lake tables,
-            and cloud storage infrastructure at Databricks.
-          </p>
-          <div class="hero-proof">
-            <div><strong>Rust</strong><span>Delta Kernel</span></div>
-            <div><strong>Open source</strong><span>query engine interoperability</span></div>
-            <div><strong>Systems</strong><span>correctness &amp; performance</span></div>
-          </div>
-          <div class="hero-cta">
-            <a href="#portfolio" class="btn btn-primary">See the work</a>
-            <a href="#about" class="btn btn-secondary">About me</a>
-          </div>
+  </header>
+  <main>
+    <section id="hero" class="hero container" aria-labelledby="hello-title">
+      <div class="hero-text">
+        <p class="eyebrow">Software engineer · New York</p>
+        <h1 id="hello-title">Hi, I’m Drake <span class="wave">👋</span></h1>
+        <p class="hero-intro">I like building useful little things for everyday life.</p>
+        <p class="hero-background">Previously, I worked on <a href="#delta-kernel">Delta Kernel Rust</a>
+          and cloud storage infrastructure at Databricks.</p>
+        <div class="hero-links">
+          <a href="#builds">Explore my projects <span aria-hidden="true">↓</span></a>
+          <a href="https://github.com/DrakeLin" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <div class="scroll-indicator">
-        <span></span>
-      </div>
+      <img class="profile-photo" src="./files/profile.jpg" alt="Drake overlooking the coast" width="460" height="460" fetchpriority="high" />
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-          <div class="about-text">
-            <p>
-              I like making systems faster and easier to build on. My previous work
-              includes Delta Kernel Rust, where I contributed to scan performance,
-              checkpoint statistics, and timezone-correct partition parsing.
-              At Databricks, I also worked on cloud storage provisioning and credentials,
-              scaling the infrastructure for high-traffic launches.
-            </p>
-            <p>
-              Before that, I studied EECS at Berkeley, researched real-time speech
-              synthesis in BAIR, built satellite hardware, and interned across SpaceX,
-              AWS, MIT Lincoln Laboratory, and biotech. I grew up in the Bay Area and
-              now live in New York.
-            </p>
-          </div>
-          <div class="about-adventures">
-            <h3>Current Adventures</h3>
-            <p>What I'm into these days:</p>
-            <div class="adventure-tags">
-              <span class="tag">Soccer</span>
-              <span class="tag">Volleyball</span>
-              <span class="tag">Movies</span>
-              <span class="tag">Books</span>
-              <span class="tag">Photography</span>
-              <span class="tag">Baking</span>
-            </div>
-          </div>
-        </div>
+    <section id="portfolio" class="portfolio container" aria-labelledby="portfolio-title">
+      <div class="section-heading">
+        <h2 id="portfolio-title">Portfolio</h2>
+        <p>A few things I’ve made and worked on.</p>
       </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-        <h2 class="section-title">Portfolio</h2>
-        <p class="section-subtitle">
-          Here are some of the projects I've worked on over the years.
-        </p>
-
-        <div class="portfolio-grid">
-          <!-- Delta Kernel -->
-          <article id="delta-kernel" class="portfolio-card delta-kernel-panel">
-            <div class="delta-kernel-copy">
-              <span class="case-label">Featured work · Open source</span>
-              <h3>Delta Kernel Rust</h3>
-              <h4>Building the Rust kernel that makes Delta Lake readable across engines.</h4>
-              <p>
-                I contributed to <strong>Delta Kernel Rust</strong>, the engine-agnostic
-                library for reading Delta tables. My work spans scan performance, structured
-                statistics, partition parsing, timezone-correct timestamps, expression APIs,
-                and storage listing behavior.
-              </p>
-              <div class="delta-kernel-links">
-                <a href="https://github.com/delta-io/delta-kernel-rs/pull/3118" target="_blank" class="card-link">Timezone-aware partition parsing ↗</a>
-                <a href="https://github.com/delta-io/delta-kernel-rs/pull/2998" target="_blank" class="card-link">Structured checkpoint stats ↗</a>
-                <a href="https://github.com/delta-io/delta-kernel-rs/pull/3022" target="_blank" class="card-link">Parquet stats API ↗</a>
-              </div>
-            </div>
-            <div class="delta-kernel-highlights">
-              <div>
-                <strong>Timezone correctness</strong>
-                <span>Added reader timezone support for partition timestamps, including IANA zones and DST edge cases.</span>
-              </div>
-              <div>
-                <strong>Less I/O</strong>
-                <span>Avoided duplicate raw JSON reads when compatible structured checkpoint statistics are available.</span>
-              </div>
-              <div>
-                <strong>Storage performance</strong>
-                <span>Prototyped bounded log listing that cut a 10k-descendant local test from 11 LIST requests to 1.</span>
+      <section id="builds" class="builds" aria-labelledby="builds-title">
+        <div class="subsection-heading">
+          <h3 id="builds-title">Websites I’ve built</h3>
+          <span>Made for everyday life</span>
+        </div>
+        <div class="builds-grid">
+          <article class="build-card">
+            <a class="build-preview showtimes-preview" href="https://showtimes.drakelin.com" target="_blank" rel="noopener noreferrer" aria-label="Open Showtimes">
+              <img src="./files/showtimes-preview.webp" alt="Showtimes app with movie listings and theater schedules" width="1265" height="889" loading="lazy" />
+            </a>
+            <div class="build-copy">
+              <div class="build-title"><h4>Showtimes</h4><span class="project-kind">Movies</span></div>
+              <p>Find a movie, a theater, and a time that works. AMC showtimes for the week, all in one place.</p>
+              <div class="build-links">
+                <a href="https://showtimes.drakelin.com" target="_blank" rel="noopener noreferrer">Visit Showtimes <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/DrakeLin/amc-showtimes" target="_blank" rel="noopener noreferrer" class="secondary-link">Source</a>
               </div>
             </div>
           </article>
-
-          <!-- Databricks -->
-          <article class="portfolio-card databricks-case-study">
-            <div class="case-study-kicker">CLOUD INFRASTRUCTURE</div>
-            <div class="case-study-heading">
-              <div>
-                <h3>Scaling cloud storage infrastructure at Databricks</h3>
-                <p class="case-study-lede">
-                  I worked on the services that provision and manage cloud storage
-                  across AWS, Azure, and GCP. The interesting part wasn't just making
-                  them work—it was making them hold up when traffic and fleet size
-                  jumped by orders of magnitude.
-                </p>
-              </div>
-              <span class="card-date">2023 — 2026</span>
+          <article class="build-card">
+            <a class="build-preview kitchenflow-preview" href="https://mise-842773271778.us-west1.run.app" target="_blank" rel="noopener noreferrer" aria-label="Open Kitchenflow">
+              <img src="./files/kitchenflow-preview.webp" alt="Kitchenflow recipe planning app" width="1265" height="712" loading="lazy" />
+            </a>
+            <div class="build-copy">
+              <div class="build-title"><h4>Kitchenflow</h4><span class="project-kind">Cooking</span></div>
+              <p>Turn recipes into a plan. Shopping lists, parallel tasks, and a cooking schedule that keeps everything on track.</p>
+              <div class="build-links"><a href="https://mise-842773271778.us-west1.run.app" target="_blank" rel="noopener noreferrer">Visit Kitchenflow <span aria-hidden="true">↗</span></a></div>
             </div>
+          </article>
+        </div>
+        <div class="more-builds">
+          <a href="https://home.drakelin.com" target="_blank" rel="noopener noreferrer"><div><strong>Homebase</strong><span>A little dashboard for life in NYC.</span></div><span aria-hidden="true">↗</span></a>
+          <a href="https://subway-anki.vercel.app" target="_blank" rel="noopener noreferrer"><div><strong>Subway Anki</strong><span>Flashcards for the ride, even offline.</span></div><span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
 
-            <div class="metric-grid">
-              <div class="metric-card">
-                <span class="metric-value">55×</span>
-                <span class="metric-label">fewer database transactions</span>
-                <span class="metric-note">~246k/hr → ~4.5k/hr</span>
-              </div>
-              <div class="metric-card">
-                <span class="metric-value">35×</span>
-                <span class="metric-label">less lock time</span>
-                <span class="metric-note">~35s → ~1.2s</span>
-              </div>
-              <div class="metric-card">
-                <span class="metric-value">&lt;200 ms</span>
-                <span class="metric-label">latency during peak launch traffic</span>
-                <span class="metric-note">after scaling work</span>
-              </div>
-              <div class="metric-card">
-                <span class="metric-value">1M</span>
-                <span class="metric-label">customer load-test scale</span>
-                <span class="metric-note">without observed degradation</span>
-              </div>
-            </div>
-
-            <div class="case-study-columns">
+      <section class="previous-work" aria-labelledby="work-title">
+        <div class="subsection-heading"><h3 id="work-title">Previous work</h3><span>Open source &amp; infrastructure</span></div>
+        <article id="delta-kernel" class="work-card kernel-card">
+          <div class="work-heading"><div><p class="eyebrow">Open source · Rust</p><h4>Delta Kernel Rust</h4></div><a href="https://github.com/delta-io/delta-kernel-rs" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">↗</span></a></div>
+          <p class="work-intro">Helping different query engines read Delta Lake tables correctly and efficiently.</p>
+          <div class="kernel-contributions">
+            <a href="https://github.com/delta-io/delta-kernel-rs/pull/3118" target="_blank" rel="noopener noreferrer"><strong>Timezone correctness <span aria-hidden="true">↗</span></strong><span>Partition timestamps with IANA zones and daylight saving edge cases.</span></a>
+            <a href="https://github.com/delta-io/delta-kernel-rs/pull/2998" target="_blank" rel="noopener noreferrer"><strong>Less repeated I/O <span aria-hidden="true">↗</span></strong><span>Use structured checkpoint statistics to avoid duplicate JSON reads.</span></a>
+            <a href="https://github.com/delta-io/delta-kernel-rs/pull/3022" target="_blank" rel="noopener noreferrer"><strong>Parquet statistics <span aria-hidden="true">↗</span></strong><span>Public statistics APIs for engine integrations.</span></a>
+          </div>
+          <details class="work-details"><summary>More contributions</summary><p>My work also spans scan performance, expression APIs, and storage listing behavior. I prototyped bounded log listing that cut a 10k-descendant local test from 11 LIST requests to 1.</p></details>
+        </article>
+        <article class="work-card infrastructure-card">
+          <div class="work-heading"><div><p class="eyebrow">Databricks · 2023–2026</p><h4>Cloud storage infrastructure</h4></div></div>
+          <p class="work-intro">Scaling storage provisioning and credentials across AWS, Azure, and GCP.</p>
+          <div class="metric-grid">
+            <div><strong>55×</strong><span>fewer DB transactions</span></div>
+            <div><strong>35×</strong><span>less lock time</span></div>
+            <div><strong>&lt;200 ms</strong><span>peak launch latency</span></div>
+            <div><strong>1M</strong><span>customers in load tests</span></div>
+          </div>
+          <details class="work-details"><summary>The engineering details</summary>            <div class="case-study-columns">
               <div>
-                <span class="case-label">Scale-up</span>
-                <h4>Prepared a storage control plane for a step-change in traffic.</h4>
+
+                <h5>Prepared a storage control plane for a step-change in traffic.</h5>
                 <p>
                   Load-tested the system into six-figure bucket counts and million-customer
                   scenarios, then removed query, polling, and refresh bottlenecks. P95 latency
@@ -190,8 +114,8 @@
                 </p>
               </div>
               <div>
-                <span class="case-label">Architecture</span>
-                <h4>Collapsed repeated work into a coordinated deployment path.</h4>
+
+                <h5>Collapsed repeated work into a coordinated deployment path.</h5>
                 <p>
                   Redesigned bucket deployment coordination to eliminate redundant database
                   work and lock contention. The change cut transaction volume by about 55×,
@@ -200,8 +124,8 @@
                 </p>
               </div>
               <div>
-                <span class="case-label">Operations</span>
-                <h4>Turned slow fleet-wide checks into targeted decisions.</h4>
+
+                <h5>Turned slow fleet-wide checks into targeted decisions.</h5>
                 <p>
                   Added a lightweight fullness signal for storage buckets so assignment could
                   avoid expensive fleet scans. Refresh time dropped from hours to seconds while
@@ -210,179 +134,38 @@
               </div>
             </div>
 
-            <div class="case-study-footer">
-              <span>Multi-cloud provisioning</span>
-              <span>Distributed systems</span>
-              <span>Performance engineering</span>
-              <span>Reliability</span>
-            </div>
+</details>
+        </article>
+      </section>
+
+      <section class="earlier-work" aria-labelledby="earlier-title">
+        <div class="subsection-heading"><h3 id="earlier-title">A little further back</h3><span>Research, space &amp; a few experiments</span></div>
+        <div class="earlier-grid">
+          <article class="earlier-card">
+            <img src="./files/grad.jpg" alt="Drake at Berkeley" width="600" height="400" loading="lazy" />
+            <p class="eyebrow">Berkeley · 2022–2024</p><h4>Speech synthesis at BAIR</h4>
+            <p>My master’s research: a 0.4M-parameter articulatory speech model with 4.9× faster CPU inference.</p>
+            <a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-202.pdf" target="_blank" rel="noopener noreferrer">Read my thesis <span aria-hidden="true">↗</span></a>
+            <details><summary>Research results</summary><p>Word error rate improved by 1.63 percentage points to 6.67%, and mean opinion score rose by 0.16 to 3.74, using 0.4M parameters versus a 9M-parameter baseline.</p></details>
           </article>
-
-          <section id="builds" class="builds" aria-labelledby="builds-title">
-            <h3 id="builds-title" class="section-title">Selected builds</h3>
-            <p class="section-subtitle">
-              Small products I built because I wanted them to exist.
-            </p>
-
-            <div class="builds-grid">
-              <article class="build-card build-card-showtimes">
-                <div class="build-meta">
-                  <span>Movie planning PWA</span>
-                  <span>2026</span>
-                </div>
-                <div class="build-visual build-visual-showtimes" aria-hidden="true">
-                  <div class="movie-strip">
-                    <div class="poster poster-one"></div>
-                    <div class="poster poster-two"></div>
-                    <div class="poster poster-three"></div>
-                  </div>
-                  <div class="showtime-ui">
-                    <span>AMC Lincoln Square 13</span>
-                    <strong>7:10</strong>
-                    <strong>8:45</strong>
-                    <strong>10:20</strong>
-                  </div>
-                </div>
-                <div class="build-copy">
-                  <h4>Showtimes</h4>
-                  <p>
-                    A movie-planning app for comparing AMC showtimes across the week.
-                    It combines theater schedules, posters, film metadata, ratings,
-                    device-local time filtering, and cached daily refreshes into a
-                    fast installable PWA.
-                  </p>
-                  <div class="build-tags">
-                    <span>Flask</span><span>Vercel</span><span>PWA</span><span>AMC</span>
-                  </div>
-                  <div class="build-links">
-                    <a href="https://showtimes.drakelin.com" target="_blank" class="card-link">Open app ↗</a>
-                    <a href="https://github.com/DrakeLin/amc-showtimes" target="_blank" class="card-link">Source ↗</a>
-                  </div>
-                </div>
-              </article>
-
-              <article class="build-card build-card-kitchenflow">
-                <div class="build-meta">
-                  <span>Cooking planner</span>
-                  <span>2026</span>
-                </div>
-                <div class="build-visual build-visual-kitchenflow" aria-hidden="true">
-                  <div class="flow-node node-one">Mix dough</div>
-                  <div class="flow-line line-one"></div>
-                  <div class="flow-node node-two">Proof · 45m</div>
-                  <div class="flow-line line-two"></div>
-                  <div class="flow-node node-three">Bake · 220°C</div>
-                </div>
-                <div class="build-copy">
-                  <h4>Kitchenflow</h4>
-                  <p>
-                    A recipe PWA that models cooking as a dependency graph. Recipes
-                    become editable tasks, shopping lists, and live schedules that
-                    account for waits, equipment constraints, oven temperatures,
-                    scaling, and projected finish times.
-                  </p>
-                  <div class="build-tags">
-                    <span>TypeScript</span><span>Vite</span><span>Graphs</span><span>Offline</span>
-                  </div>
-                  <div class="build-links">
-                    <a href="https://mise-842773271778.us-west1.run.app" target="_blank" class="card-link">Open app ↗</a>
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <div class="more-builds">
-              <div>
-                <strong>Homebase</strong>
-                <span>Personal NYC dashboard for planning days, tasks, hobbies, reading, and things to do.</span>
-                <a href="https://home.drakelin.com" target="_blank">home.drakelin.com ↗</a>
-              </div>
-              <div>
-                <strong>Subway Anki</strong>
-                <span>Offline-capable Anki study client designed for quick mobile review and synchronization.</span>
-                <a href="https://subway-anki.vercel.app" target="_blank">Open app ↗</a>
-              </div>
-            </div>
-          </section>
-
-          <!-- BAIR -->
-          <article class="portfolio-card">
-            <div class="card-header">
-              <h3>Berkeley Artificial Intelligence Research</h3>
-              <span class="card-date">September 2022 - May 2024</span>
-            </div>
-            <p>
-              As a Graduate Student Researcher in the Berkeley Speech Group, my
-              Master's research focused on Differentiable Digital Signal
-              Processing for articulatory synthesis—teaching computers to model
-              how human vocal tracts produce speech. I developed a novel
-              real-time ML model requiring only 0.4M parameters (vs. 9M
-              baseline), improving Word Error Rate by 1.63% (to 6.67%) and Mean
-              Opinion Score by 0.16 (to 3.74) while achieving 4.9x inference
-              speedup on CPU.
-            </p>
-            <img src="./files/grad.jpg" alt="Berkeley Artificial Intelligence Research" class="card-image" />
-            <a
-              href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-202.pdf"
-              target="_blank"
-              class="card-link"
-              >Read my Master's thesis</a
-            >
+          <article class="earlier-card">
+            <img src="./files/spacex.jpg" alt="Drake beside a SpaceX rocket" width="600" height="400" loading="lazy" />
+            <p class="eyebrow">SpaceX · 2022</p><h4>Testing satellite hardware</h4>
+            <p>Built test infrastructure and spectral analysis tools for reaction wheels, reducing test time by 10×.</p>
+            <details><summary>More about the work</summary><p>As a software engineering intern, I worked on torque and energy margin verification, using Short-Time Fourier Transform analysis to detect bearing faults before flight.</p></details>
           </article>
-
-          <!-- QubeSat -->
-          <article class="portfolio-card featured">
-            <div class="card-header">
-              <h3>QubeSat</h3>
-              <span class="card-date">Fall 2019 - August 2023</span>
-            </div>
-            <p>
-              As part of the mechanical subteam at Space Technologies at Cal, I
-              worked on a four-year mission to send quantum gyroscopes into
-              space for the first time. I designed the CubeSat structure and
-              deployment mechanism, integrating quantum gyroscope payloads and
-              sensors while using SolidWorks to simulate and stress-test
-              designs. After years of work, QubeSat successfully launched as
-              part of NASA's ELaNa 41 mission.
-            </p>
-            <img src="./files/qube.jpg" alt="QubeSat" class="card-image" />
-            <div class="card-links">
-              <a
-                href="https://blogs.nasa.gov/kennedy/2022/02/10/elana-41-mission-update/"
-                target="_blank"
-                class="card-link"
-                >NASA Mission</a
-              >
-              <a
-                href="https://stac.berkeley.edu/project/qubesat"
-                target="_blank"
-                class="card-link"
-                >Project Website</a
-              >
-            </div>
+          <article class="earlier-card">
+            <img src="./files/qube.jpg" alt="QubeSat satellite hardware" width="600" height="400" loading="lazy" />
+            <p class="eyebrow">QubeSat · 2019–2023</p><h4>Building a CubeSat</h4>
+            <p>Designed the CubeSat structure and deployment mechanism for a mission carrying quantum gyroscopes.</p>
+            <a href="https://blogs.nasa.gov/kennedy/2022/02/10/elana-41-mission-update/" target="_blank" rel="noopener noreferrer">See the launch <span aria-hidden="true">↗</span></a>
+            <a href="https://stac.berkeley.edu/project/qubesat" target="_blank" rel="noopener noreferrer">Project website <span aria-hidden="true">↗</span></a>
           </article>
-
-          <!-- SpaceX -->
-          <article class="portfolio-card">
+        </div>
+        <details class="archive"><summary>More work &amp; early projects <span>2018–2021</span></summary><div class="archive-grid">          <!-- AWS -->
+          <article class="archive-item">
             <div class="card-header">
-              <h3>SpaceX</h3>
-              <span class="card-date">May 2022 - August 2022</span>
-            </div>
-            <p>
-              As a Software Engineer Intern at SpaceX, I designed and
-              implemented critical test infrastructure for satellite hardware
-              torque and energy margin verification. I developed a spectral
-              analysis system using Short-Time Fourier Transform (STFT) to
-              detect reaction wheel bearing faults before they became flight
-              risks, reducing test time by 10x.
-            </p>
-            <img src="./files/spacex.jpg" alt="SpaceX" class="card-image" />
-          </article>
-
-          <!-- AWS -->
-          <article class="portfolio-card">
-            <div class="card-header">
-              <h3>Amazon Web Services</h3>
+              <h4>Amazon Web Services</h4>
               <span class="card-date">July 2021 - October 2021</span>
             </div>
             <p>
@@ -391,13 +174,13 @@
               offer creation. I built RESTful APIs with database integration and
               established a robust CI/CD pipeline with automated testing.
             </p>
-            <img src="./files/balls.jpg" alt="Amazon Web Services" class="card-image" />
+            <img loading="lazy" decoding="async" src="./files/balls.jpg" alt="Amazon Web Services" class="card-image" />
           </article>
 
           <!-- MIT Lincoln Lab -->
-          <article class="portfolio-card">
+          <article class="archive-item">
             <div class="card-header">
-              <h3>MIT Lincoln Laboratory</h3>
+              <h4>MIT Lincoln Laboratory</h4>
               <span class="card-date">May 2021 - July 2021</span>
             </div>
             <p>
@@ -406,13 +189,13 @@
               Satellites (LES). By developing and optimizing a Blind Adaptive
               Beamforming algorithm, I improved signal-to-noise ratio by 30%.
             </p>
-            <img src="./files/llabs.jpg" alt="MIT Lincoln Laboratory" class="card-image" />
+            <img loading="lazy" decoding="async" src="./files/llabs.jpg" alt="MIT Lincoln Laboratory" class="card-image" />
           </article>
 
           <!-- Ultima Genomics -->
-          <article class="portfolio-card">
+          <article class="archive-item">
             <div class="card-header">
-              <h3>Ultima Genomics</h3>
+              <h4>Ultima Genomics</h4>
               <span class="card-date">May 2020 - May 2021</span>
             </div>
             <p>
@@ -422,13 +205,13 @@
               and built a data processing pipeline integrating multiple sensors
               and hardware interfaces.
             </p>
-            <img src="./files/biotech.jpg" alt="Ultima Genomics" class="card-image" />
+            <img loading="lazy" decoding="async" src="./files/biotech.jpg" alt="Ultima Genomics" class="card-image" />
           </article>
 
           <!-- Berkeley Lab -->
-          <article class="portfolio-card">
+          <article class="archive-item">
             <div class="card-header">
-              <h3>Berkeley Lab</h3>
+              <h4>Berkeley Lab</h4>
               <span class="card-date">December 2019 - January 2021</span>
             </div>
             <p>
@@ -438,13 +221,13 @@
               nitrogen-vacancy center research in diamond for nuclear magnetic
               resonance experiments.
             </p>
-            <img src="./files/nv.jpg" alt="Berkeley Lab" class="card-image" />
+            <img loading="lazy" decoding="async" src="./files/nv.jpg" alt="Berkeley Lab" class="card-image" />
           </article>
 
           <!-- Mood for Zoom -->
-          <article class="portfolio-card featured">
+          <article class="archive-item">
             <div class="card-header">
-              <h3>Mood for Zoom</h3>
+              <h4>Mood for Zoom</h4>
               <span class="card-date">Spring 2020</span>
               <span class="card-badge">2nd Place - LA Hacks</span>
             </div>
@@ -454,23 +237,23 @@
               visualization tool using Google Cloud Vision API. Won 2nd Place
               Overall and an honorable mention for Best Use of Machine Learning.
             </p>
-            <img
+            <img loading="lazy" decoding="async"
               src="./files/zoom.jpg"
               alt="Mood for Zoom"
               class="card-image"
             />
             <a
               href="https://devpost.com/software/zoom-platinum"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               class="card-link"
               >View on Devpost</a
             >
           </article>
 
           <!-- Senate Watch -->
-          <article class="portfolio-card">
+          <article class="archive-item">
             <div class="card-header">
-              <h3>Senate Watch</h3>
+              <h4>Senate Watch</h4>
               <span class="card-date">Spring 2020</span>
             </div>
             <p>
@@ -479,23 +262,23 @@
               transparent and accessible. Built with Beautiful Soup, Python, and
               jQuery/JavaScript.
             </p>
-            <img
+            <img loading="lazy" decoding="async"
               src="./files/senate.jpg"
               alt="Senate Watch"
               class="card-image"
             />
             <a
               href="https://devpost.com/software/senatewatch"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               class="card-link"
               >View on Devpost</a
             >
           </article>
 
           <!-- Crawler Robot -->
-          <article class="portfolio-card">
+          <article class="archive-item">
             <div class="card-header">
-              <h3>Crawler Robot</h3>
+              <h4>Crawler Robot</h4>
               <span class="card-date">Summer 2018</span>
             </div>
             <p>
@@ -505,7 +288,7 @@
               our robot beat competitors by 50%.
             </p>
             <div class="card-video">
-              <iframe
+              <iframe loading="lazy" title="Crawler Robot demonstration"
                 src="https://www.youtube.com/embed/7H9XwOS4yLI"
                 frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -513,31 +296,13 @@
               ></iframe>
             </div>
           </article>
-        </div>
-      </div>
+</div></details>
+      </section>
     </section>
 
-    <!-- Inspiration Section -->
-    <section id="inspiration" class="inspiration">
-      <div class="container">
-        <h2 class="section-title">Inspiration</h2>
-        <p class="section-subtitle">
-          Stories, games, and media that have shaped my thinking.
-        </p>
-
-        <div class="inspiration-grid">
-          <div class="inspiration-item">
-            <img src="./files/arrival.jpg" alt="Arrival" />
-          </div>
-          <div class="inspiration-item">
-            <img src="./files/name.jpg" alt="Your Name" />
-          </div>
-        </div>
-      </div>
-
-      <div class="inspiration-lists">
-        <p class="inspiration-subtitle">An incomplete list</p>
-        <div class="inspiration-tags">
+    <section id="about" class="about container" aria-labelledby="about-title">
+      <div><p class="eyebrow">Beyond the keyboard</p><h2 id="about-title">A little about me</h2></div>
+      <div class="about-copy"><p>I grew up in the Bay Area, studied EECS at Berkeley, and now call New York home.</p><p>Outside of building things, you’ll find me playing soccer or volleyball, watching a movie, taking photos, or baking something.</p><p>I’m drawn to stories that stick with you. A few favorites:</p>        <div class="inspiration-tags" id="inspiration">
           <span class="tag">A Silent Voice</span>
           <span class="tag">Arrival</span>
           <span class="tag">CODA</span>
@@ -546,116 +311,59 @@
           <span class="tag">Stories of Your Life and Others</span>
           <span class="tag">One Hundred Years of Solitude</span>
         </div>
-      </div>
+</div>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2 class="section-title">Get in Touch</h2>
-        <p class="section-subtitle">Feel free to reach out!</p>
-
-        <div class="contact-links">
+    <section id="contact" class="contact container" aria-labelledby="contact-title">
+      <div><p class="eyebrow">Always happy to chat</p><h2 id="contact-title">Say hello.</h2></div>
+              <div class="contact-links">
           <a href="mailto:drakelin18@gmail.com" class="contact-item">
-            <span class="contact-icon">@</span>
             <span>drakelin18@gmail.com</span>
           </a>
           <a
             href="https://www.linkedin.com/in/drake-lin/"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             class="contact-item"
           >
-            <span class="contact-icon">in</span>
             <span>LinkedIn</span>
           </a>
           <a
             href="https://github.com/DrakeLin"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             class="contact-item"
           >
-            <span class="contact-icon">&lt;/&gt;</span>
             <span>GitHub</span>
           </a>
           <a
             href="https://letterboxd.com/novallyn/"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             class="contact-item"
           >
-            <span class="contact-icon">🎬</span>
             <span>Letterboxd</span>
           </a>
           <a
             href="https://www.goodreads.com/user/show/32705242-drake-lin"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             class="contact-item"
           >
-            <span class="contact-icon">📚</span>
             <span>Goodreads</span>
           </a>
         </div>
-      </div>
+
     </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <p>&copy; 2026 Drake Lin</p>
-    </footer>
-
-    <script>
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-          // Close mobile menu if open
-          document.querySelector(".nav-links").classList.remove("active");
-        });
-      });
-
-      // Mobile navigation toggle
-      document
-        .querySelector(".nav-toggle")
-        .addEventListener("click", function () {
-          document.querySelector(".nav-links").classList.toggle("active");
-        });
-
-      // Navbar background on scroll
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 50) {
-          navbar.classList.add("scrolled");
-        } else {
-          navbar.classList.remove("scrolled");
-        }
-      });
-
-      // Animate elements on scroll
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      }, observerOptions);
-
-      document
-        .querySelectorAll(
-          ".portfolio-card, .inspiration-item, .about-content, .contact-links"
-        )
-        .forEach((el) => {
-          observer.observe(el);
-        });
-    </script>
-  </body>
+  </main>
+  <footer class="footer container"><span>© 2026 Drake Lin</span><a href="#hero">Back to top ↑</a></footer>
+  <script>
+    const menu = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    function closeMenu() { links.classList.remove('active'); menu.setAttribute('aria-expanded', 'false'); }
+    menu.addEventListener('click', () => {
+      const open = menu.getAttribute('aria-expanded') !== 'true';
+      menu.setAttribute('aria-expanded', String(open));
+      links.classList.toggle('active', open);
+    });
+    links.addEventListener('click', (event) => { if (event.target.closest('a')) closeMenu(); });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') { closeMenu(); menu.focus(); } });
+    window.matchMedia('(min-width: 641px)').addEventListener('change', (event) => { if (event.matches) closeMenu(); });
+  </script>
+</body>
 </html>
