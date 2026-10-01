@@ -129,8 +129,6 @@ details > p { margin-top: 12px; font-size: 14px; }
 .about { display: grid; grid-template-columns: 1fr 1.5fr; gap: 70px; padding-block: 70px; }
 .about h2 { max-width: 260px; }
 .about-copy > p { font-size: 16px; margin-bottom: 16px; }
-.inspiration-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 4px; }
-.tag { font-size: 12px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 6px; color: var(--muted); }
 .contact { border-top: 1px solid var(--line); padding-block: 40px; display: flex; justify-content: space-between; align-items: start; gap: 30px; }
 .contact-links { display: flex; flex-wrap: wrap; gap: 10px 24px; max-width: 410px; font-size: 14px; padding-top: 4px; }
 .contact-item:first-child { width: 100%; font-size: 17px; }
