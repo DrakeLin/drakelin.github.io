@@ -175,45 +175,45 @@
               </div>
             </div>
 
-            <div class="delta-kernel-panel">
-              <div class="delta-kernel-copy">
-                <span class="case-label">Open source · Delta Kernel</span>
-                <h4>Building the Rust kernel that makes Delta Lake readable across engines.</h4>
-                <p>
-                  I also contributed to <strong>Delta Kernel Rust</strong>, the engine-agnostic
-                  library for reading Delta tables. My work spans scan performance, structured
-                  statistics, partition parsing, timezone-correct timestamps, expression APIs,
-                  and storage listing behavior.
-                </p>
-                <div class="delta-kernel-links">
-                  <a href="https://github.com/delta-io/delta-kernel-rs/pull/3118" target="_blank" class="card-link">Timezone-aware partition parsing ↗</a>
-                  <a href="https://github.com/delta-io/delta-kernel-rs/pull/2998" target="_blank" class="card-link">Structured checkpoint stats ↗</a>
-                  <a href="https://github.com/delta-io/delta-kernel-rs/pull/3022" target="_blank" class="card-link">Parquet stats API ↗</a>
-                </div>
-              </div>
-              <div class="delta-kernel-highlights">
-                <div>
-                  <strong>Timezone correctness</strong>
-                  <span>Added reader timezone support for partition timestamps, including IANA zones and DST edge cases.</span>
-                </div>
-                <div>
-                  <strong>Less I/O</strong>
-                  <span>Avoided duplicate raw JSON reads when compatible structured checkpoint statistics are available.</span>
-                </div>
-                <div>
-                  <strong>Storage performance</strong>
-                  <span>Prototyped bounded log listing that cut a 10k-descendant local test from 11 LIST requests to 1.</span>
-                </div>
-              </div>
-            </div>
-
             <div class="case-study-footer">
               <span>Multi-cloud provisioning</span>
               <span>Distributed systems</span>
-              <span>Delta Kernel Rust</span>
-              <span>Open source</span>
               <span>Performance engineering</span>
               <span>Reliability</span>
+            </div>
+          </article>
+
+          <!-- Delta Kernel -->
+          <article class="portfolio-card delta-kernel-panel">
+            <div class="delta-kernel-copy">
+              <span class="case-label">Open source</span>
+              <h3>Delta Kernel Rust</h3>
+              <h4>Building the Rust kernel that makes Delta Lake readable across engines.</h4>
+              <p>
+                I contributed to <strong>Delta Kernel Rust</strong>, the engine-agnostic
+                library for reading Delta tables. My work spans scan performance, structured
+                statistics, partition parsing, timezone-correct timestamps, expression APIs,
+                and storage listing behavior.
+              </p>
+              <div class="delta-kernel-links">
+                <a href="https://github.com/delta-io/delta-kernel-rs/pull/3118" target="_blank" class="card-link">Timezone-aware partition parsing ↗</a>
+                <a href="https://github.com/delta-io/delta-kernel-rs/pull/2998" target="_blank" class="card-link">Structured checkpoint stats ↗</a>
+                <a href="https://github.com/delta-io/delta-kernel-rs/pull/3022" target="_blank" class="card-link">Parquet stats API ↗</a>
+              </div>
+            </div>
+            <div class="delta-kernel-highlights">
+              <div>
+                <strong>Timezone correctness</strong>
+                <span>Added reader timezone support for partition timestamps, including IANA zones and DST edge cases.</span>
+              </div>
+              <div>
+                <strong>Less I/O</strong>
+                <span>Avoided duplicate raw JSON reads when compatible structured checkpoint statistics are available.</span>
+              </div>
+              <div>
+                <strong>Storage performance</strong>
+                <span>Prototyped bounded log listing that cut a 10k-descendant local test from 11 LIST requests to 1.</span>
+              </div>
             </div>
           </article>
 

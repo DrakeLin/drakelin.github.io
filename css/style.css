@@ -1209,7 +1209,8 @@ section {
 
 
 .delta-kernel-panel {
-  margin-top: 34px;
+  grid-column: 1 / -1;
+  margin-top: 0;
   padding: 28px;
   border-radius: 18px;
   background: #edf3ee;
