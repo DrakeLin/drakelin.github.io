@@ -18,7 +18,8 @@
       <a href="#hero" class="nav-brand">Drake Lin</a>
       <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#portfolio">Portfolio</a>
+        <a href="#portfolio">Work</a>
+        <a href="#builds">Builds</a>
         <a href="#inspiration">Inspiration</a>
         <a href="#contact">Contact</a>
       </div>
@@ -424,6 +425,97 @@
               ></iframe>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Builds Section -->
+    <section id="builds" class="builds">
+      <div class="container">
+        <p class="eyebrow">SIDE PROJECTS</p>
+        <h2 class="section-title">Selected builds</h2>
+        <p class="section-subtitle">
+          Small products I built because I wanted them to exist.
+        </p>
+
+        <div class="builds-grid">
+          <article class="build-card build-card-showtimes">
+            <div class="build-meta">
+              <span>Movie planning PWA</span>
+              <span>2026</span>
+            </div>
+            <div class="build-visual build-visual-showtimes" aria-hidden="true">
+              <div class="movie-strip">
+                <div class="poster poster-one"></div>
+                <div class="poster poster-two"></div>
+                <div class="poster poster-three"></div>
+              </div>
+              <div class="showtime-ui">
+                <span>AMC Lincoln Square 13</span>
+                <strong>7:10</strong>
+                <strong>8:45</strong>
+                <strong>10:20</strong>
+              </div>
+            </div>
+            <div class="build-copy">
+              <h3>Showtimes</h3>
+              <p>
+                A movie-planning app for comparing AMC showtimes across the week.
+                It combines theater schedules, posters, film metadata, ratings,
+                device-local time filtering, and cached daily refreshes into a
+                fast installable PWA.
+              </p>
+              <div class="build-tags">
+                <span>Flask</span><span>Vercel</span><span>PWA</span><span>AMC</span>
+              </div>
+              <div class="build-links">
+                <a href="https://showtimes.drakelin.com" target="_blank" class="card-link">Open app ↗</a>
+                <a href="https://github.com/DrakeLin/amc-showtimes" target="_blank" class="card-link">Source ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="build-card build-card-kitchenflow">
+            <div class="build-meta">
+              <span>Cooking planner</span>
+              <span>2026</span>
+            </div>
+            <div class="build-visual build-visual-kitchenflow" aria-hidden="true">
+              <div class="flow-node node-one">Mix dough</div>
+              <div class="flow-line line-one"></div>
+              <div class="flow-node node-two">Proof · 45m</div>
+              <div class="flow-line line-two"></div>
+              <div class="flow-node node-three">Bake · 220°C</div>
+            </div>
+            <div class="build-copy">
+              <h3>Kitchenflow</h3>
+              <p>
+                A recipe PWA that models cooking as a dependency graph. Recipes
+                become editable tasks, shopping lists, and live schedules that
+                account for waits, equipment constraints, oven temperatures,
+                scaling, and projected finish times.
+              </p>
+              <div class="build-tags">
+                <span>TypeScript</span><span>Vite</span><span>Graphs</span><span>Offline</span>
+              </div>
+              <div class="build-links">
+                <a href="https://mise-842773271778.us-west1.run.app" target="_blank" class="card-link">Open app ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="more-builds">
+          <div>
+            <strong>Homebase</strong>
+            <span>Personal NYC dashboard for planning days, tasks, hobbies, reading, and things to do.</span>
+            <a href="https://home.drakelin.com" target="_blank">home.drakelin.com ↗</a>
+          </div>
+          <div>
+            <strong>Subway Anki</strong>
+            <span>Offline-capable Anki study client designed for quick mobile review and synchronization.</span>
+            <a href="https://subway-anki.vercel.app" target="_blank">Open app ↗</a>
+          </div>
         </div>
       </div>
     </section>
