@@ -6,7 +6,7 @@
   <meta name="description" content="Hi, I'm Drake — a software engineer in New York. Websites I've built, my contributions to Delta Kernel Rust, and a few things I love." />
   <meta name="theme-color" content="#f8f9f5" />
   <title>Drake Lin</title>
-  <link rel="stylesheet" href="./css/style.css?v=c550ba95" />
+  <link rel="stylesheet" href="./css/style.css?v=98341479" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -332,14 +332,19 @@
     </section>
 
     <section id="about" class="about container" aria-labelledby="about-title">
-      <div><p class="eyebrow">Beyond the keyboard</p><h2 id="about-title">A little about me</h2></div>
       <div class="about-copy">
+        <p class="eyebrow">Beyond the keyboard</p><h2 id="about-title">A little about me</h2>
         <p>I grew up in the Bay Area, studied EECS at Berkeley, and now call New York home.</p>
         <p>Outside of building things, you’ll find me playing soccer or volleyball, watching a movie, taking photos, or baking something.</p>
-        <a class="about-social" href="https://www.instagram.com/__df29__/" target="_blank" rel="noopener noreferrer">
+        <a class="about-social" href="https://www.instagram.com/___df29___/" target="_blank" rel="noopener noreferrer">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg>
-          <span>@__df29__ on Instagram</span><span aria-hidden="true">↗</span>
+          <span>@___df29___ on Instagram</span><span aria-hidden="true">↗</span>
         </a>
+      </div>
+      <div class="instagram-profile">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/___df29___/" data-instgrm-version="14">
+          <a href="https://www.instagram.com/___df29___/" target="_blank" rel="noopener noreferrer">View @___df29___ on Instagram</a>
+        </blockquote>
       </div>
     </section>
     <section id="contact" class="contact container" aria-labelledby="contact-title">
@@ -362,7 +367,7 @@
           >
             <span>GitHub</span>
           </a>
-          <a href="https://www.instagram.com/__df29__/" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <a href="https://www.instagram.com/___df29___/" target="_blank" rel="noopener noreferrer" class="contact-item">
             <span>Instagram</span>
           </a>
           <a
@@ -384,7 +389,21 @@
     </section>
   </main>
   <footer class="footer container"><span>© 2026 Drake Lin</span><a href="#hero">Back to top ↑</a></footer>
+  <script async src="https://www.instagram.com/embed.js"></script>
   <script>
+    const instagramContainer = document.querySelector('.instagram-profile');
+    function labelInstagramFrame() {
+      const frame = instagramContainer.querySelector('iframe');
+      if (frame) frame.title = 'Instagram photos from @___df29___';
+      return Boolean(frame);
+    }
+    if (!labelInstagramFrame()) {
+      const instagramObserver = new MutationObserver(() => {
+        if (labelInstagramFrame()) instagramObserver.disconnect();
+      });
+      instagramObserver.observe(instagramContainer, { childList: true, subtree: true });
+    }
+
     const menu = document.querySelector('.nav-toggle');
     const links = document.querySelector('.nav-links');
     function closeMenu() { links.classList.remove('active'); menu.setAttribute('aria-expanded', 'false'); }
