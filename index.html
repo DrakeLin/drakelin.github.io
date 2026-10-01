@@ -36,14 +36,21 @@
           <img src="./files/profile.jpg" alt="Drake Lin" />
         </div>
         <div class="hero-text">
-          <h1>Hello!</h1>
+          <p class="eyebrow">SOFTWARE ENGINEER · SYSTEMS · ML</p>
+          <h1>I build infrastructure that stays fast when the numbers get big.</h1>
           <p class="hero-intro">
-            I'm <strong>Drake Lin</strong>, a Software Engineer at Databricks in
-            San Francisco.
+            I'm <strong>Drake Lin</strong>, a software engineer in New York. I previously
+            worked on cloud storage infrastructure at Databricks, scaling systems from
+            everyday traffic to launch-day spikes and million-customer load tests.
           </p>
+          <div class="hero-proof">
+            <div><strong>55×</strong><span>fewer DB transactions</span></div>
+            <div><strong>&lt;200 ms</strong><span>peak service latency</span></div>
+            <div><strong>1M</strong><span>customer load-test scale</span></div>
+          </div>
           <div class="hero-cta">
-            <a href="#about" class="btn btn-primary">About Me</a>
-            <a href="#portfolio" class="btn btn-secondary">View Work</a>
+            <a href="#portfolio" class="btn btn-primary">See the work</a>
+            <a href="#about" class="btn btn-secondary">About me</a>
           </div>
         </div>
       </div>
@@ -59,15 +66,16 @@
         <div class="about-content">
           <div class="about-text">
             <p>
-              I am a Software Engineer at Databricks in San Francisco. I
-              graduated from the University of California, Berkeley with a
-              Master's degree in Electrical Engineering and Computer Science
-              with a concentration in machine learning applications to speech
-              processing and a minor in Mechanical Engineering.
+              I'm a software engineer who likes systems work where performance,
+              reliability, and product scale all collide. At Databricks I worked on
+              the infrastructure behind cloud storage provisioning and credentials,
+              including major scale-up efforts for high-traffic launches.
             </p>
             <p>
-              I grew up in the Bay Area and now live in San Francisco. My
-              interests lie in space and biotech, exploring our human limits.
+              Before that, I studied EECS at Berkeley, researched real-time speech
+              synthesis in BAIR, built satellite hardware, and interned across SpaceX,
+              AWS, MIT Lincoln Laboratory, and biotech. I grew up in the Bay Area and
+              now live in New York.
             </p>
           </div>
           <div class="about-adventures">
@@ -96,22 +104,82 @@
 
         <div class="portfolio-grid">
           <!-- Databricks -->
-          <article class="portfolio-card">
-            <div class="card-header">
-              <h3>Databricks</h3>
-              <span class="card-date">August 2023 - Present</span>
+          <article class="portfolio-card databricks-case-study">
+            <div class="case-study-kicker">FEATURED CASE STUDY</div>
+            <div class="case-study-heading">
+              <div>
+                <h3>Scaling cloud storage infrastructure at Databricks</h3>
+                <p class="case-study-lede">
+                  I worked on the services that provision and manage cloud storage
+                  across AWS, Azure, and GCP. The interesting part wasn't just making
+                  them work—it was making them hold up when traffic and fleet size
+                  jumped by orders of magnitude.
+                </p>
+              </div>
+              <span class="card-date">2023 — 2026</span>
             </div>
-            <p>
-              As a Software Engineer at Databricks, I develop the cloud storage
-              and credentials infrastructure powering enterprise data platforms
-              globally. I built an automated multi-cloud blob storage
-              provisioning system managing 1,000,000+ buckets and 500+ TB of
-              customer data across 100k+ users, and designed a scalable cloud
-              credential management system enabling secure cross-region,
-              cross-cloud data access for 10,000+ enterprise workspaces. Through
-              comprehensive monitoring and rigorous change management, we've
-              achieved 99.9999% service uptime.
-            </p>
+
+            <div class="metric-grid">
+              <div class="metric-card">
+                <span class="metric-value">55×</span>
+                <span class="metric-label">fewer database transactions</span>
+                <span class="metric-note">~246k/hr → ~4.5k/hr</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-value">35×</span>
+                <span class="metric-label">less lock time</span>
+                <span class="metric-note">~35s → ~1.2s</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-value">&lt;200 ms</span>
+                <span class="metric-label">latency during peak launch traffic</span>
+                <span class="metric-note">after scaling work</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-value">1M</span>
+                <span class="metric-label">customer load-test scale</span>
+                <span class="metric-note">without observed degradation</span>
+              </div>
+            </div>
+
+            <div class="case-study-columns">
+              <div>
+                <span class="case-label">Scale-up</span>
+                <h4>Prepared a storage control plane for a step-change in traffic.</h4>
+                <p>
+                  Load-tested the system into six-figure bucket counts and million-customer
+                  scenarios, then removed query, polling, and refresh bottlenecks. P95 latency
+                  fell from roughly 2 seconds to about 400 ms in testing, then stayed below
+                  200 ms at peak launch traffic.
+                </p>
+              </div>
+              <div>
+                <span class="case-label">Architecture</span>
+                <h4>Collapsed repeated work into a coordinated deployment path.</h4>
+                <p>
+                  Redesigned bucket deployment coordination to eliminate redundant database
+                  work and lock contention. The change cut transaction volume by about 55×,
+                  reduced lock time by about 35×, and shortened reconciliation from roughly
+                  65 seconds to 29 seconds.
+                </p>
+              </div>
+              <div>
+                <span class="case-label">Operations</span>
+                <h4>Turned slow fleet-wide checks into targeted decisions.</h4>
+                <p>
+                  Added a lightweight fullness signal for storage buckets so assignment could
+                  avoid expensive fleet scans. Refresh time dropped from hours to seconds while
+                  assignment latency stayed under 300 ms at 100k-scale tests.
+                </p>
+              </div>
+            </div>
+
+            <div class="case-study-footer">
+              <span>Multi-cloud provisioning</span>
+              <span>Distributed systems</span>
+              <span>Performance engineering</span>
+              <span>Reliability</span>
+            </div>
           </article>
 
           <!-- BAIR -->
@@ -407,7 +475,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <p>&copy; 2024 Drake Lin</p>
+      <p>&copy; 2026 Drake Lin</p>
     </footer>
 
     <script>
