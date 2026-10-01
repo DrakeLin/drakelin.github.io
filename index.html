@@ -401,7 +401,10 @@
     }
     function scrollBuilds(direction) {
       const step = builds.querySelector('.build-card').getBoundingClientRect().width + parseFloat(getComputedStyle(builds).columnGap);
-      builds.scrollBy({ left: direction * step, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+      const index = direction > 0
+        ? Math.floor((builds.scrollLeft + 1) / step) + 1
+        : Math.ceil((builds.scrollLeft - 1) / step) - 1;
+      builds.scrollTo({ left: index * step, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
     }
     buildControls.addEventListener('click', (event) => {
       const button = event.target.closest('button');
